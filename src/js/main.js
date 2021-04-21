@@ -14,6 +14,7 @@ import reviewsSlider from './reviewsSlider';
 import introAnimation from './introAnimation';
 import photoComparisonSlider from './photoComparisonSlider';
 import fullscreenGallery from './fullscreenGallery';
+import anchorLinks from './anchorLinks';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     photoComparisonSlider();
     
     fullscreenGallery();
+    anchorLinks();
 });
 
 window.addEventListener('load', function() {
