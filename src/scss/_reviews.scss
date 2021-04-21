@@ -1,0 +1,178 @@
+.reviews {
+    padding: 10rem 0;
+    background-color: #f8f8f8;
+}
+
+.reviews__heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.reviews__text {
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+
+    max-width: 112rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    width: 100%;
+}
+
+.reviews__slider {
+    .swiper-slide {
+        width: 48rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swiper-container {
+        overflow: visible;
+    }
+}
+
+.reviews__slider-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 36rem;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 1;
+    padding: 3rem;
+    color: white;
+    border-radius: 3rem;
+    overflow: hidden;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover {
+        .reviews__slider-card-bg::before {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
+}
+
+.reviews__slider-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 10rem;
+        height: 10rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../img/reviews/play.svg');
+        background-size: contain;
+        z-index: 20;
+        transition: transform 0.2s;
+    }
+}
+
+.reviews__slider-card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.reviews__slider-card-author {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 3rem;
+    font-family: var(--nunito);
+}
+
+.reviews__slider-card-title {
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 120%;
+    font-family: var(--nunito);
+    margin-top: auto;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 21'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-opacity: 0.4; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M2.49,18.54A8.1,8.1,0,0,1,.25,12.43c0-5,3.48-9.4,8.54-11.6l1.27,2c-4.73,2.55-5.65,5.87-6,8a5,5,0,0,1,2.73-.44,5,5,0,0,1-.38,9.9A5.53,5.53,0,0,1,2.49,18.54Zm14.17,0a8.1,8.1,0,0,1-2.24-6.11c0-5,3.48-9.4,8.54-11.6l1.26,2c-4.72,2.55-5.64,5.87-6,8a5.15,5.15,0,0,1,7.3,4.5,5,5,0,0,1-5,5,5.5,5.5,0,0,1-3.89-1.67Z' /%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 2.5rem;
+        height: 2rem;
+        margin-bottom: 1rem;
+        pointer-events: none;
+    }
+}
+
+.reviews__slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+
+    .swiper-pagination-bullet {
+        margin: 0 1.6rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background: #e4e4e4;
+        transition: background-color 0.2s;
+        position: relative;
+        opacity: 1 !important;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 3rem;
+            height: 3rem;
+            background: rgba(228, 112, 75, 0.1);
+            border: 1px solid #e4704b;
+            z-index: -1;
+            border-radius: 50%;
+            transition: opacity .2s, visibility 0s linear .2s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--primary-color);
+
+        &::before {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .2s, visibility .2s;
+        }
+    }
+}

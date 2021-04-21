@@ -1,0 +1,124 @@
+.page-footer {
+    background-color: #fff;
+    padding-top: 7.5rem;
+    padding-bottom: 10rem;
+    color: var(--text-color);
+}
+
+.page-footer__top-row {
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__logo {
+    flex-shrink: 0;
+    margin-right: 15rem;
+    position: relative;
+}
+
+.page-footer__logo-image {
+    display: block;
+    height: auto;
+    width: 23rem;
+}
+
+.page-footer__content {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.page-footer__copyright {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: rgba(black, 0.2);
+    width: 63rem;
+    margin-right: 4rem;
+}
+
+
+
+.page-footer__contacts-block {
+    flex-shrink: 0;
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'footer-phone-link footer-whatsapp-link' 'footer-phone-link-text footer-whatsapp-link';
+    text-align: right;
+    grid-column-gap: 2.2rem;
+    grid-row-gap: 0.5rem;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.page-footer__phone-link {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    font-family: var(--nunito);
+    grid-area: footer-phone-link;
+    justify-self: flex-end;
+}
+
+.page-footer__phone-link-text {
+    justify-self: flex-end;
+    grid-area: footer-phone-link-text;
+}
+
+.page-footer__whats-app-link {
+    width: 4.7rem;
+    height: 4.7rem;
+    flex-shrink: 0;
+    grid-area: footer-whatsapp-link;
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.page-footer__bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.page-footer__bottom-link {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    margin-right: 5rem;
+
+    .no-touch &:hover {
+        text-decoration: underline;
+    }
+}
+
+.page-footer__made-by {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 114%;
+    color: #d1d1d3;
+    flex-shrink: 0;
+
+    &:link,
+    &:visited {
+        color: #d1d1d3;
+    }
+}
+
+
+.page-footer__made-by-image {
+    width: 8.5rem;
+    height: auto;
+    margin-left: 1.2rem;
+    flex-shrink: 0;
+   margin-top: 0.8rem;
+}

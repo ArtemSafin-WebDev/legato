@@ -1,0 +1,154 @@
+.how-to-choose {
+    padding: 8rem 0;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.how-to-choose__card-table {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 45rem;
+    width: auto;
+    object-fit: contain;
+    object-position: right bottom;
+    margin-right: -1rem;
+}
+
+.how-to-choose__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 8rem;
+    display: grid;
+}
+
+.how-to-choose__card {
+    background: #ffffff;
+    box-shadow: 0px 0.4rem 4rem rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
+    padding: 5rem 7rem;
+    color: var(--text-color);
+}
+
+.how-to-choose__card-heading {
+    margin-bottom: 3rem;
+}
+
+.how-to-choose__card-text {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+.how-to-choose__card-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.4rem;
+    align-items: center;
+}
+
+.how-to-choose__card-form-field {
+}
+
+.how-to-choose__card-form-input {
+    height: 7.2rem;
+    background: #f7f7f7;
+    border-radius: 2rem;
+    padding: 0 2.4rem;
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: var(--nunito);
+    color: var(--text-color);
+    @include placeholder {
+        color: rgba(#231f20, 0.5);
+    }
+}
+
+.how-to-choose__card-form-policy {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.how-to-choose__sale {
+    display: flex;
+    align-items: center;
+    font-family: var(--nunito);
+    align-self: flex-start;
+}
+
+.how-to-choose__sale-text {
+    width: 30%;
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 120%;
+}
+
+.how-to-choose__sale-amount {
+    width: 20rem;
+    height: 14.7rem;
+    flex-shrink: 0;
+    margin-left: 2rem;
+    background-image: url('../img/sale-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-to-choose__sale-amount-number {
+    font-weight: bold;
+    font-size: 4.8rem;
+    line-height: 120%;
+}
+
+
+.how-to-choose__card-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.how-to-choose__card-btn {
+    margin-right: 2.4rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.how-to-choose__card-write-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: var(--nunito);
+    color: var(--text-color);
+    transition: background-color .2s, color .2s, border-color .2s;
+    padding: 2.3rem 4rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    user-select: none;
+    border-radius: 2rem;
+    border: 1px solid var(--primary-color);
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+}

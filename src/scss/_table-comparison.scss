@@ -1,0 +1,106 @@
+.table-comparison {
+    padding: 10rem 0;
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    th {
+        font-family: var(--nunito);
+        font-weight: bold;
+        font-size: 2.8rem;
+        line-height: 120%;
+    }
+
+    tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+       
+        grid-column-gap: 8rem;
+        position: relative;
+        
+    }
+
+    tbody tr {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -1.8rem;
+            right: -1.8rem;
+            top: 0rem;
+            bottom: 0rem;
+            background: rgba(198, 198, 204, 0.2);
+            border-radius: 1rem;
+            transition: opacity .2s;
+            z-index: -1;
+            opacity: 0;
+        }
+        .no-touch &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    td {
+        font-size: 2rem;
+        line-height: 1.2;
+        padding: 1.4rem 0;
+    }
+
+    td:first-child {
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 2.5rem;
+            height: 2.2rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('../img/comparison-table/checkmark.svg');
+            margin-right: 2.6rem;
+            flex-shrink: 0;
+        }
+    }
+
+    td:last-child {
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 1.8rem;
+            height: 1.8rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('../img/comparison-table/cross.svg');
+            margin-right: 2.3rem;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.table-comparison__heading {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3.5rem;
+    
+}
+
+.table-comparison__heading-logo {
+    width: 10rem;
+    flex-shrink: 0;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: .8rem;
+}

@@ -1,0 +1,315 @@
+.calculator {
+    padding: 10rem 0;
+    background-color: #f8f8f8;
+}
+
+.calculator__card {
+    background: #ffffff;
+    border-radius: 3rem;
+    padding: 6.4rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 8rem;
+}
+
+.calculator__card-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator__heading {
+    margin-bottom: 3.5rem;
+}
+
+.calculator__text {
+    font-size: 2.2rem;
+    line-height: 3.4rem;
+    margin-bottom: 5rem;
+}
+
+.calculator__do-not-know {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    color: var(--primary-color);
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover {
+        text-decoration: underline;
+    }
+}
+
+.calculator__illustration {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    margin-bottom: -6.4rem;
+}
+
+.calculator__form {
+}
+
+.calculator__form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1.2rem;
+    grid-column-gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.calculator__form-field--fullwidth {
+    grid-column: 1 / -1;
+}
+
+.calculator__form-field-label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    color: rgba(#231f20, 0.5);
+    margin-bottom: 0.8rem;
+    font-family: var(--nunito);
+}
+
+.calculator__form-input {
+    height: 7.2rem;
+    padding: 0 3rem;
+    background: #f6f6f6;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: var(--nunito);
+    color: black;
+
+    @include placeholder {
+        color: rgba(#231f20, 0.5);
+    }
+}
+
+.calculator__form-select {
+    text-align: left;
+
+    .parsley-errors-list.filled {
+        color: var(--error-color);
+        font-size: 1.2rem;
+        margin-top: 0.6rem;
+    }
+    .choices {
+        background: #f6f6f6;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 0;
+        position: relative;
+        border-radius: 2rem;
+        font-weight: 600;
+        font-family: var(--nunito);
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .choices[data-type*='select-one'] .choices__inner {
+        padding-bottom: 0rem;
+    }
+
+    .choices__inner {
+        background: #f6f6f6;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding: 0 3rem;
+        font-weight: 600;
+        font-family: var(--nunito);
+        min-height: 7.2rem;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border-radius: 0;
+        border-radius: 2rem !important;
+        transition: border-color 0.2s;
+        border: 1px solid transparent;
+    }
+
+    &.parsley-error {
+        .choices__inner {
+            border-color: var(--error-color) !important;
+        }
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 3rem;
+    }
+
+    .choices[data-type*='select-one']:after {
+        border: none;
+        margin: 0;
+        right: 2.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.3 7.37'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23231f20;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M7.15,7.37a.62.62,0,0,1-.44-.18L.21,1.13a.65.65,0,1,1,.88-1L7.15,5.83,13.21.17a.65.65,0,1,1,.88,1L7.59,7.19A.62.62,0,0,1,7.15,7.37Z'/%3E%3C/svg%3E");
+        width: 14px;
+        height: 7px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+    }
+
+    .choices__placeholder {
+        opacity: 1;
+
+        color: rgba(#231f20, 0.5);
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        border: none;
+        // border-top: 1px solid rgba(0, 0, 0, 0.08);
+        background: white;
+
+        border-radius: 3rem !important;
+
+        box-shadow: none;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 2rem;
+        box-shadow: 0 0 1rem rgba(black, 0.1);
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+
+    .choices__list--dropdown .choices__item {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        transition: background-color 0.2s, color 0.2s;
+
+        padding: 2rem 3rem;
+        display: flex;
+        align-items: center;
+
+        &.choices__placeholder {
+            display: none;
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 28rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 22rem;
+        }
+    }
+}
+
+.calculator__form-field-checkbox {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+}
+
+.calculator__form-field-checkbox-input {
+    @include visuallyHidden();
+}
+
+.calculator__form-field-checkbox-mark {
+    width: 1.8rem;
+    height: 1.8rem;
+    flex-shrink: 0;
+    margin-right: 1.1rem;
+    border: 1px solid #918f90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    margin-top: 0.25rem;
+    svg {
+        width: 1.2rem;
+        height: 0.8rem;
+        flex-shrink: 0;
+        fill: #918f90;
+        opacity: 0;
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+}
+
+.calculator__form-field-checkbox-text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #918f90;
+}
+
+.calculator__form-field-checkbox-input:checked ~ .calculator__form-field-checkbox-mark svg {
+    opacity: 1;
+}
+
+.calculator__form-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4.5rem;
+    font-family: var(--nunito);
+    font-weight: 400;
+}
+
+.calculator__form-price-new {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 6.3rem;
+    color: #e73334;
+    margin-right: 2.8rem;
+}
+
+.calculator__form-price-old {
+    text-decoration: line-through;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    color: #918f90;
+}
+
+
+.calculator__form-submit {
+    width: 100%;
+}

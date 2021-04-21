@@ -1,0 +1,153 @@
+.page-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 400;
+    transition: background-color 0.2s, color .2s, box-shadow .2s;
+    color: white;
+
+    &.fixed {
+        background-color: white;
+        color: var(--text-color);
+        box-shadow: 0 0 1rem rgba(black, .1);
+    }
+}
+
+.page-header__row {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.page-header__logo {
+    flex-shrink: 0;
+    position: relative;
+    margin-right: 4rem;
+    flex-shrink: 0;
+}
+
+.page-header__logo-image {
+    width: 23rem;
+    display: block;
+    height: auto;
+
+    &:last-child {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .2s, visibility 0s linear .2s;
+
+
+        .page-header.fixed & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .2s, visibility .2s;
+        }
+    }
+}
+
+.page-header__menu {
+    align-self: flex-start;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.page-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.page-header__nav-link {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+   
+    flex-shrink: 0;
+    margin: .5rem;
+    margin-right: 2rem;
+    color: white;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+   
+
+    .page-header.fixed & {
+        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: var(--primary-color);
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.page-header__contacts-block {
+    flex-shrink: 0;
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'phone-link whatsapp-link' 'phone-link-text whatsapp-link';
+    text-align: right;
+    grid-column-gap: 2.2rem;
+    grid-row-gap: .5rem;
+}
+
+.page-header__phone-link {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    font-family: var(--nunito);
+    grid-area: phone-link;
+    justify-self: flex-end;
+    color: white;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .page-header.fixed & {
+        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+}
+
+.page-header__phone-link-text {
+    justify-self: flex-end;
+    grid-area: phone-link-text;
+}
+
+
+.page-header__whats-app-link {
+    width: 4.7rem;
+    height: 4.7rem;
+    flex-shrink: 0;
+    grid-area: whatsapp-link;
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}

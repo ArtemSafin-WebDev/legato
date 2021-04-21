@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Legato
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 12.06 19.5" id="arrow-left" xmlns="http://www.w3.org/2000/svg"><path d="M12.06 17.21L4.6 9.75l7.46-7.46L9.75 0 0 9.75l9.75 9.75z"/></symbol><symbol viewBox="0 0 12.06 19.5" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M0 17.21l7.46-7.46L0 2.29 2.31 0l9.75 9.75-9.75 9.75z"/></symbol><symbol viewBox="0 0 14.3 7.37" id="arrow-thin-down" xmlns="http://www.w3.org/2000/svg"><path d="M7.15 7.37a.62.62 0 01-.44-.18L.21 1.13a.65.65 0 11.88-1l6.06 5.7L13.21.17a.65.65 0 11.88 1l-6.5 6.02a.62.62 0 01-.44.18z"/></symbol><symbol viewBox="0 0 15 28" id="arrow-thin-left" xmlns="http://www.w3.org/2000/svg"><path d="M14 28a1 1 0 01-.71-.29l-13-13a1 1 0 010-1.42l13-13a1 1 0 111.42 1.42L2.41 14l12.3 12.29a1 1 0 010 1.42A1 1 0 0114 28z"/></symbol><symbol viewBox="0 0 15 28" id="arrow-thin-right" xmlns="http://www.w3.org/2000/svg"><path d="M1 28a1 1 0 01-.71-.29 1 1 0 010-1.42L12.59 14 .29 1.71A1 1 0 011.71.29l13 13a1 1 0 010 1.42l-13 13A1 1 0 011 28z"/></symbol><symbol viewBox="0 0 11.5 8.5" id="checkmark" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 6.69L10.22.22a.72.72 0 01.5-.22.77.77 0 01.52.18.76.76 0 01.11 1l-.07.09-7 7a.85.85 0 01-.48.22.76.76 0 01-.5-.15l-.08-.07-3-3A.76.76 0 010 4.78a.75.75 0 01.18-.52A.81.81 0 01.67 4a.75.75 0 01.52.14l.09.08z"/></symbol><symbol viewBox="0 0 63.27 45.49" id="child-desk" xmlns="http://www.w3.org/2000/svg"><path d="M63.25 14.38a1 1 0 00-1-1.14H60a1 1 0 00-1 .76l-3 12.73h-4.58l-.58-4.47h2a1 1 0 001-1v-5a1 1 0 00-1-1H33.13a3.31 3.31 0 00.75-2.09v-.72a3.32 3.32 0 00-6.64 0v.72a3.26 3.26 0 00.76 2.12h-4V5.51a.8.8 0 00-.06-.3v-.06c0-.06 0 0 0 0L21.77.57A1 1 0 0020.9 0a1 1 0 00-.9.52l-2.5 4.56v.08a1.2 1.2 0 00-.06.32v9.76h-.85v-.06l-2.15-7a1 1 0 00-.94-.71 1 1 0 00-1 .66l-2.49 7a.38.38 0 000 .1H8.28a1 1 0 00-1 1v5a1 1 0 001 1h3.58l-.32 4.42H7.42L4.34 13.43a1 1 0 00-1-.78H1a1 1 0 00-1 1.15l2.36 15.85L.42 44.36a1 1 0 00.24.79 1 1 0 00.75.34h2.85a1 1 0 001-.75l2.88-11.32h2.91l-.75 10.41a1 1 0 00.93 1.07h.07a1 1 0 001-.93l.76-10.56h.66l1.13 11.17a1 1 0 001 .9h2.53a1 1 0 001-1V27.69a1 1 0 00-1-1h-4.83l.32-4.42h35l.58 4.47h-3.9a1 1 0 00-1 1v16.17a1 1 0 001 1H48a1 1 0 001-.9l1.08-10.72h.2l1.4 10.91a1 1 0 001 .87h.13a1 1 0 00.86-1.12l-1.4-10.66h3.1l2.79 10.86a1 1 0 001 .76h2.74a1 1 0 001-1.14L61 29.63zm-34-1.9a1.32 1.32 0 012.64 0v.72a1.32 1.32 0 11-2.64 0zM22 6.56v8.73h-2.62V6.56zM20.8 3.2l.64 1.35h-1.38zm-7.45 8.51l.87 2.82h-1.87zm-6 19.71a1 1 0 00-1 .75L3.49 43.49h-.94l1.81-13.72a1.22 1.22 0 000-.27l-2.2-14.85h.41l3.08 13.26a1 1 0 001 .78h4.75l-.2 2.73zm10-2.73v14.8h-.63l-1.1-11.17a1 1 0 00-1-.9H13.2l.2-2.73zm-8.1-11.4h42.58v3H9.28zm39.88 14a1 1 0 00-1 .9l-1.05 10.72h-.53V28.74h3.11l.34 2.55zM59.9 42.91L57.11 32a1 1 0 00-1-.75H52l-.33-2.55h5.17a1 1 0 001-.78l3-12.72h.33L59 29.47a1.31 1.31 0 000 .28l1.73 13.16z"/></symbol><symbol viewBox="0 0 16.84 16.15" id="cross" xmlns="http://www.w3.org/2000/svg"><path d="M8.42 16.15a1 1 0 01-1-1V9.08H1a1 1 0 010-2h6.42V1a1 1 0 012 0v6.07h6.42a1 1 0 010 2H9.42v6.07a1 1 0 01-1 1.01z"/></symbol><symbol viewBox="0 0 11 19" id="fb" xmlns="http://www.w3.org/2000/svg"><path d="M7.06 6.38V4.51c0-.84.19-1.26 1.49-1.26h1.64V.13H7.46C4.11.13 3 1.66 3 4.29v2.09H.81V9.5H3v9.38h4.06V9.5h2.76l.37-3.12z"/></symbol><symbol viewBox="0 0 17.33 21.67" id="file" xmlns="http://www.w3.org/2000/svg"><path d="M2.3 0A2.29 2.29 0 000 2.3v17.06A2.29 2.29 0 00.67 21a2.34 2.34 0 001.63.68H15a2.32 2.32 0 001.66-.68 2.29 2.29 0 00.67-1.63V7.81A1.22 1.22 0 0017 7L10.39.36A1.22 1.22 0 009.53 0zm-.95 2.3a1 1 0 01.95-.95h6.37v4.74a2 2 0 002 2H16v11.27a.91.91 0 01-.28.67 1 1 0 01-.67.28H2.3a1 1 0 01-.67-.31.91.91 0 01-.28-.67zm13.54 4.47H10.7a.67.67 0 01-.7-.68V1.91z"/></symbol><symbol id="info" viewBox="0 0 14.46 36.01" xmlns="http://www.w3.org/2000/svg"><defs><style>.kcls-1{fill:#e4704b}</style></defs><path class="kcls-1" d="M11.08 0a3.38 3.38 0 102.39 1 3.38 3.38 0 00-2.39-1zm-.81 10.73c-2.67.23-10 6.05-10 6.05-.45.34-.31.32 0 .95s.31.65.74.36 1.19-.76 2.43-1.53c4.77-3.06.77 4-1.28 15.91-.81 5.89 4.5 2.86 5.87 2s5-3.37 5.33-3.62.14-.61-.24-1.17c-.27-.38-.54-.11-.54-.11-1.47 1-4.14 3-4.5 1.71S10.45 21.15 12 15.1c.21-1.44.88-4.59-1.73-4.37z"/></symbol><symbol viewBox="0 0 62.31 42.02" id="kitchen-desk" xmlns="http://www.w3.org/2000/svg"><path d="M62.3 1.15a1 1 0 00-1-1.15h-3.06a1 1 0 00-1 .77l-4 17.44h-6l-.49-4.1h1.89a1 1 0 001-1v-5a1 1 0 00-1-1H12.32a1 1 0 00-1 1v5a1 1 0 001 1h3.13l-.51 4.13H9L5 1.15a1 1 0 00-1-.78H1a1 1 0 00-1 1.15l3 20.22L.53 40.51a1 1 0 00.24.79 1 1 0 00.75.34h3.64a1 1 0 001-.75l3.72-14.62H14L12.27 40.1a1 1 0 00.87 1.12h.12a1 1 0 001-.88L16 26.27h1.46l1.47 14.47a1 1 0 001 .9h3.22a1 1 0 001-1v-21.4a1 1 0 00-1-1H17l.51-4.13h27.17l.48 4.1h-6.4a1 1 0 00-1 1V41a1 1 0 001 1H42a1 1 0 001-.9l1.49-14.77h1.6l1.69 14.36a1 1 0 001 .88h.11a1 1 0 00.88-1.11l-1.63-14.11h4.14l3.83 14.91a1 1 0 001 .76h3.71a1 1 0 00.75-.35 1 1 0 00.24-.79l-2.56-19.12zM9.1 24.27a1 1 0 00-1 .75L4.38 39.64H2.66L5 21.87a.66.66 0 000-.28L2.16 2.37h1.06l4 17.1a1 1 0 001 .77h6.48l-.49 4zm13-4v19.4h-1.29l-1.47-14.5a1 1 0 00-1-.9h-2.12l.49-4zM13.32 9.13h34.26v3H13.32zm30.31 15.22a1 1 0 00-1 .9L41.14 40h-1.38V20.21h5.64l.49 4.14zM59.64 40h-1.79L54 25.1a1 1 0 00-1-.75h-5.1l-.49-4.14H54a1 1 0 001-.78L59 2h1.12l-2.9 19.6a.88.88 0 000 .28z"/></symbol><symbol viewBox="0 0 14 20" id="ok" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 10.74c-.28-.57-1.07-1.05-2.12-.24A6.84 6.84 0 017 11.64a6.84 6.84 0 01-3.71-1.14c-1-.81-1.84-.33-2.12.24-.5 1 .06 1.49 1.33 2.3A8.54 8.54 0 006 14.1l-.8.8-.03.1C4.06 16.07 3 17.14 2.25 17.88a1.14 1.14 0 000 1.62l.14.16a1.16 1.16 0 001.64 0l3-3c1.15 1.13 2.24 2.22 3 3a1.16 1.16 0 001.64 0l.13-.16a1.12 1.12 0 000-1.62l-3-3-.8-.79A8.35 8.35 0 0011.5 13c1.27-.77 1.83-1.26 1.33-2.26z"/><path d="M7 10.12a5.06 5.06 0 10-5.06-5.06A5.05 5.05 0 007 10.12zm0-7.55a2.49 2.49 0 11-2.5 2.49A2.5 2.5 0 017 2.57z"/></symbol><symbol id="play" viewBox="0 0 98 98" xmlns="http://www.w3.org/2000/svg"><defs><style>.ncls-1{fill:#fff}.ncls-2{fill:#e4704b}</style></defs><path class="ncls-1" d="M66.27 46.57l-26.82-16.2a2.46 2.46 0 00-1.27-.37 2.49 2.49 0 00-1.28.33 2.54 2.54 0 00-.94.93 2.49 2.49 0 00-.33 1.28V65a2.49 2.49 0 00.37 1.23 2.54 2.54 0 00.94.93 2.49 2.49 0 001.28.33 2.46 2.46 0 001.27-.36l26.82-16.2a2.55 2.55 0 000-4.36z"/><path class="ncls-2" d="M48.75 0A48.75 48.75 0 1097.5 48.75 48.81 48.81 0 0048.75 0zm18.42 50a2.51 2.51 0 01-.9.93l-26.82 16.2a2.46 2.46 0 01-1.27.36 2.49 2.49 0 01-1.28-.33 2.54 2.54 0 01-.94-.93 2.49 2.49 0 01-.33-1.23V32.55a2.49 2.49 0 01.37-1.28 2.54 2.54 0 01.94-.93 2.49 2.49 0 011.24-.34 2.46 2.46 0 011.27.36l26.82 16.2a2.54 2.54 0 01.9 3.43z"/></symbol><symbol viewBox="0 0 33.68 33.68" id="question" xmlns="http://www.w3.org/2000/svg"><path d="M16.84 0a16.84 16.84 0 11-8 31.63l-6.92 2a1.35 1.35 0 01-.77 0 1.37 1.37 0 01-.67-.38 1.33 1.33 0 01-.38-.67 1.35 1.35 0 010-.77l2-6.91A16.85 16.85 0 0116.84 0zm1.1 19H11.2a1.09 1.09 0 00-.68.36 1.11 1.11 0 000 1.45 1.09 1.09 0 00.68.36h6.88a1 1 0 00.68-.36 1.11 1.11 0 000-1.45 1 1 0 00-.68-.36zm4.4-6.59H11.2a1.09 1.09 0 00-.68.36 1.11 1.11 0 000 1.45 1.09 1.09 0 00.68.36h11.29a1.09 1.09 0 00.68-.36 1.11 1.11 0 000-1.45 1.09 1.09 0 00-.68-.36z"/></symbol><symbol viewBox="0 0 26 21" id="quotes" xmlns="http://www.w3.org/2000/svg"><path class="pcls-1" d="M2.49 18.54a8.1 8.1 0 01-2.24-6.11c0-5 3.48-9.4 8.54-11.6l1.27 2c-4.73 2.55-5.65 5.87-6 8a5 5 0 012.73-.44 5 5 0 01-.38 9.9 5.53 5.53 0 01-3.92-1.75zm14.17 0a8.1 8.1 0 01-2.24-6.11c0-5 3.48-9.4 8.54-11.6l1.26 2c-4.72 2.55-5.64 5.87-6 8a5.15 5.15 0 017.3 4.5 5 5 0 01-5 5 5.5 5.5 0 01-3.89-1.67z"/></symbol><symbol viewBox="0 0 18 15" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M18 1.78a7.17 7.17 0 01-2.12.59A3.77 3.77 0 0017.5.28a7.33 7.33 0 01-2.34.92 3.66 3.66 0 00-2.7-1.2 3.74 3.74 0 00-3.69 3.79 3.55 3.55 0 00.1.86 10.45 10.45 0 01-7.62-4 3.94 3.94 0 00-.5 1.95A3.82 3.82 0 002.4 5.75a3.67 3.67 0 01-1.68-.47A3.78 3.78 0 003.69 9a3.93 3.93 0 01-1 .13A3.17 3.17 0 012 9.1a3.7 3.7 0 003.45 2.63 7.29 7.29 0 01-4.57 1.62 8.49 8.49 0 01-.88 0A10.3 10.3 0 005.66 15c6.79 0 10.51-5.77 10.51-10.77v-.49A7.63 7.63 0 0018 1.78z"/></symbol><symbol viewBox="0 0 20 12" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M17.54 7.6a8.51 8.51 0 011.92 2.22c.64 1.06-.7 1.14-.7 1.14h-2.58a1.81 1.81 0 01-1.28-.39c-1-.66-1.9-2.39-2.59-2.16s-.69 1.78-.69 1.78a.62.62 0 01-.16.39.65.65 0 01-.53.12H9.78A6.24 6.24 0 015 8.67C2.55 6.13.39 1.13.39 1.13S.27.83.4.66 1 .5 1 .5h2.73a.72.72 0 01.44.16.89.89 0 01.24.34 17.61 17.61 0 001 2.13c1.15 2 1.68 2.42 2.05 2.21.6-.31.43-2.81.43-2.81a2.76 2.76 0 00-.29-1.31 1.3 1.3 0 00-.82-.43c-.16 0 .1-.38.43-.55A6.58 6.58 0 019.62 0 4.85 4.85 0 0111 .13c1 .23.63 1.12.63 3.24 0 .69-.1 1.63.37 2 .21.14.73 0 2-2.17A17.63 17.63 0 0015.06.89a.89.89 0 01.25-.31 1 1 0 01.38-.08h2.9s.88-.1 1 .29-.33 1.38-1.52 3c-1.92 2.55-2.14 2.31-.53 3.81z" fill-rule="evenodd"/></symbol><symbol id="whatsapp" viewBox="0 0 47 47" xmlns="http://www.w3.org/2000/svg"><defs><style>.scls-1{fill:#4fd758}.scls-2{fill:#fff}</style></defs><circle class="scls-1" cx="23.5" cy="23.5" r="23.5"/><path class="scls-2" d="M29.23 25.51c-.32-.16-1.84-.9-2.13-1s-.49-.15-.7.16a15 15 0 01-1 1.21c-.19.2-.37.22-.67.08a8.34 8.34 0 01-2.51-1.55 9.4 9.4 0 01-1.73-2.15.46.46 0 01.14-.64c.14-.15.31-.36.47-.55a2.75 2.75 0 00.31-.52.56.56 0 000-.54c-.08-.16-.7-1.69-1-2.3s-.51-.53-.7-.53a5.62 5.62 0 00-.59 0 1.16 1.16 0 00-.83.38 3.44 3.44 0 00-1.09 2.57 6.07 6.07 0 001.27 3.21A13.82 13.82 0 0023.81 28c.74.32 1.32.5 1.77.66a4.36 4.36 0 002 .12 3.19 3.19 0 002.1-1.48 2.55 2.55 0 00.19-1.49c-.08-.14-.28-.22-.59-.35zm-5.67 7.68a10.38 10.38 0 01-5.27-1.44l-.38-.22-3.9 1 1.05-3.8-.25-.39a10.21 10.21 0 01-1.58-5.47A10.35 10.35 0 0130.9 15.6a10.15 10.15 0 012.24 3.4 10.31 10.31 0 01-9.57 14.24zm8.81-19.07a12.66 12.66 0 00-8.82-3.59 12.39 12.39 0 00-10.78 18.58L11 35.53l6.6-1.72a12.61 12.61 0 005.95 1.51A12.44 12.44 0 0036 22.92a12.29 12.29 0 00-3.64-8.76z"/></symbol><symbol viewBox="0 0 87.43 43.82" id="window-desk" xmlns="http://www.w3.org/2000/svg"><path d="M86.43 35.73H69.34V1a1 1 0 00-1-1h-48.7a1 1 0 00-1 1v34.73H1a1 1 0 00-1 1v6.09a1 1 0 001 1h85.43a1 1 0 001-1v-6.09a1 1 0 00-1-1zm-19.09 0H44.71V2h22.63zM20.64 2h22.07v33.73H20.64zm64.79 39.82H2v-4.09h83.43z"/><path d="M40 3.87H23.45a1 1 0 00-1 1v28.25a1 1 0 001 1H40a1 1 0 001-1V4.87a1 1 0 00-1-1zm-1 28.25H24.45V5.87H39zM47.48 34.12H64a1 1 0 001-1V4.87a1 1 0 00-1-1H47.48a1 1 0 00-1 1v28.25a1 1 0 001 1zm1-28.25H63v26.25H48.48z"/></symbol><symbol viewBox="0 0 62.36 44.84" id="work-desk" xmlns="http://www.w3.org/2000/svg"><path d="M25 27.94a1 1 0 00-1 1v4.16a1 1 0 002 0v-4.16a1 1 0 00-1-1zM36.8 34.1a1 1 0 001-1v-4.16a1 1 0 10-2 0v4.16a1 1 0 001 1z"/><path d="M61.36 11H42.05a5.61 5.61 0 001.86-4.17v-.64a1 1 0 00-1-1h-9.27a1 1 0 00-1 1v.59A5.65 5.65 0 0034.5 11H22.3V3.33a1.33 1.33 0 012.66 0v1.35a1 1 0 002 0V3.33a3.33 3.33 0 00-6.66 0V11H1a1 1 0 00-1 1v6a1 1 0 001 1h5.1v24.8a1 1 0 001 1h48.71a1 1 0 001-1V19h4.55a1 1 0 001-1v-6a1 1 0 00-1-1zM41.89 7.19a3.63 3.63 0 01-7.22 0zM8.1 19h22.08v23.8H8.1zm46.71 23.8H32.18V19h22.63zM60.36 17H2v-4h58.36z"/></symbol><symbol id="writing-desk" viewBox="0 0 49.53 45.39" xmlns="http://www.w3.org/2000/svg"><defs><style>.vcls-1{fill:none}</style></defs><path class="vcls-1" d="M2 12.5h34.22v2.99H2zM27 23.59v19.8h1.38l1.49-14.77a1 1 0 011-.89h2.33v-4.14zM44.47 25l2.9-19.6h-1.12l-4.06 17.41a1 1 0 01-1 .78h-6v4.14h5.07a1 1 0 011 .75l3.83 14.91h1.79l-2.4-18.13a.87.87 0 01-.01-.26z"/><path d="M49.51 4.52a1 1 0 00-1-1.14h-3.05a1 1 0 00-1 .77l-4 17.44H35.2v-4.1h2a1 1 0 001-1v-5a1 1 0 00-1-1H1a1 1 0 00-1 1v5a1 1 0 001 1h3.49v26.35a1 1 0 002 0V17.49H33.2v4.1H26a1 1 0 00-1 1v21.8a1 1 0 001 1h3.28a1 1 0 001-.9l1.5-14.76h1.42v14a1 1 0 002 0v-14h4.29l3.83 14.91a1 1 0 001 .75H48a1 1 0 001-1.13l-2.54-19.13zM2 12.5h34.22v3H2zm28.85 15.23a1 1 0 00-1 .89l-1.49 14.77H27v-19.8h6.2v4.14zm16 15.66h-1.78l-3.83-14.91a1 1 0 00-1-.75H35.2v-4.14h6a1 1 0 001-.78l4.05-17.43h1.12L44.47 25a.87.87 0 000 .28z"/><path d="M18.81 10.38h8.08a1 1 0 000-2h-6.52L18.51.76a1 1 0 00-2 .48z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header__row">
+                    <a href="#" class="page-header__logo">
+                        <img src="img/logo-white.svg" alt="" class="page-header__logo-image">
+                        <img src="img/logo-dark.svg" alt="" class="page-header__logo-image">
+                    </a>
+                    <div class="page-header__menu">
+                        <nav class="page-header__nav">
+                            <a href="#" class="page-header__nav-link">
+                                Описание
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Применение
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Виды
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Выбрать толщину
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Внешний вид
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Свойства
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Расчет стоимости
+                            </a>
+                            <a href="#" class="page-header__nav-link">
+                                Отзывы
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="page-header__contacts-block">
+        
+                        <a href="tel:+74951299226" class="page-header__phone-link">+7 (495) 129-92-26</a>
+                        <p class="page-header__phone-link-text">
+                            Звонок бесплатный
+                        </p>
+                        <a href="#" class="page-header__whats-app-link">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-whatsapp">
+                                <use xlink:href="#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>        <main class="page-main">
+
+
+<section class="intro">
+    <div class="intro__bg">
+        <img src="img/intro-bg.jpg" alt="" class="intro__bg-image">
+        <img src="img/intro-bg-blurred.jpg" alt="" class="intro__bg-image intro__bg-image--blurred">
+
+    </div>
+    <div class="container">
+        <div class="intro__content">
+            <div class="intro__text-content">
+                <h2 class="intro__heading">
+                    Мягкое стекло на стол — силиконовая скатерть «‎Гибкое стекло»
+                </h2>
+                <div class="intro__buttons">
+                    <a href="#" class="btn intro__calculate-btn">
+                        Рассчитать стоимость
+                    </a>
+                    <a href="#" class="intro__get-consultation">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-question">
+                            <use xlink:href="#question"></use>
+                        </svg>
+                        Получить консультацию
+                    </a>
+                </div>
+            </div>
+
+            <ul class="intro__features-list">
+                <li class="intro__features-list-item">
+                    <div class="intro__features-card">
+                        <img src="img/features-icons/1.svg" alt="" class="intro__features-icon">
+                        <div class="intro__features-card-text">
+                            Сохраним новизну вашего столана 20 лет
+                        </div>
+                    </div>
+                </li>
+                <li class="intro__features-list-item">
+                    <div class="intro__features-card">
+                        <img src="img/features-icons/2.svg" alt="" class="intro__features-icon">
+                        <div class="intro__features-card-text">
+                            Поможем выбрать размер скатерти
+                        </div>
+                    </div>
+                </li>
+                <li class="intro__features-list-item">
+                    <div class="intro__features-card">
+                        <img src="img/features-icons/3.svg" alt="" class="intro__features-icon">
+                        <div class="intro__features-card-text">
+                            Зищитим любую поверхность от цараин и сколов
+                        </div>
+                    </div>
+                </li>
+                <li class="intro__features-list-item">
+                    <div class="intro__features-card">
+                        <img src="img/features-icons/4.svg" alt="" class="intro__features-icon">
+                        <div class="intro__features-card-text">
+                            Доставим в любой город России
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="photo-comparison">
+    <div class="container">
+        <div class="photo-comparison__card">
+            <div class="photo-comparison__card-col">
+                <div class="photo-comparison__card-content">
+
+
+                    <h2 class="section-heading photo-comparison__heading">
+                        Cиликоновая скатерть — прозрачная защита для мебели
+                    </h2>
+                    <div class="photo-comparison__text">
+                        <p>
+                            Силиконовая скатерть «гибкое стекло» - современная зашита вашего стола! Прозрачная скатерть
+                            даст
+                            защиту вашей мебели от скалываний, загрязнений и царапин. Больше не нужно прятать красивую
+                            мебель, чтобы ее защитить!
+                        </p>
+                    </div>
+                    <a href="#" class="btn photo-comparison__link">
+                        Рассчитать стоимость
+                    </a>
+                </div>
+            </div>
+            <div class="photo-comparison__card-col">
+                <div class="photo-comparison__slider js-photo-comparison-slider" style="--percentage-shown: 0.5;">
+                    <figure class="cd-image-container">
+                        <img src="img/image-after.jpg" alt="Original Image" class="cd-image-original">
+
+                        <div class="cd-resize-img">
+
+                            <img src=" img/image-before.jpg" alt="Modified Image" class="cd-image-modified">
+
+                        </div>
+
+                        <div class="cd-handle-wrapper">
+                            <div class="cd-handle">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fullscreen-gallery js-fullscreen-gallery">
+    <div class="fullscreen-gallery__bg-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="fullscreen-gallery__bg-slider-card">
+                        <img src="img/fullscreen-slider/1.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="fullscreen-gallery__bg-slider-card">
+                        <img src="img/fullscreen-slider/2.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="fullscreen-gallery__bg-slider-card">
+                        <img src="img/fullscreen-slider/1.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="fullscreen-gallery__bg-slider-card">
+                        <img src="img/fullscreen-slider/2.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="fullscreen-gallery__bg-slider-card">
+                        <img src="img/fullscreen-slider/1.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="fullscreen-gallery__content">
+            <h2 class="section-heading fullscreen-gallery__heading">
+                Cиликоновая скатерть<br>
+                впишется в любой интерьер
+            </h2>
+            <div class="fullscreen-gallery__categories">
+                <a href="#" class="fullscreen-gallery__categories-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-kitchen-desk">
+                        <use xlink:href="#kitchen-desk"></use>
+                    </svg>
+                    <h4 class="fullscreen-gallery__categories-link-title">
+                        Кухонные<br>столы
+                    </h4>
+                </a>
+                <a href="#" class="fullscreen-gallery__categories-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-writing-desk">
+                        <use xlink:href="#writing-desk"></use>
+                    </svg>
+                    <h4 class="fullscreen-gallery__categories-link-title">
+                        Письменные<br> столы
+                    </h4>
+                </a>
+                <a href="#" class="fullscreen-gallery__categories-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-work-desk">
+                        <use xlink:href="#work-desk"></use>
+                    </svg>
+                    <h4 class="fullscreen-gallery__categories-link-title">
+                        Рабочие<br> столешницы
+                    </h4>
+                </a>
+                <a href="#" class="fullscreen-gallery__categories-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-child-desk">
+                        <use xlink:href="#child-desk"></use>
+                    </svg>
+                    <h4 class="fullscreen-gallery__categories-link-title">
+                        Детские<br>столы
+                    </h4>
+                </a>
+                <a href="#" class="fullscreen-gallery__categories-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-window-desk">
+                        <use xlink:href="#window-desk"></use>
+                    </svg>
+                    <h4 class="fullscreen-gallery__categories-link-title">
+                        Подоконники<br>и полки
+                    </h4>
+                </a>
+            </div>
+            <div class="fullscreen-gallery__bottom-row">
+                <div class="fullscreen-gallery__inner-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="fullscreen-gallery__inner-slider-card">
+                                    <div class="fullscreen-gallery__inner-slider-card-category">
+                                        кухонные столы
+                                    </div>
+                                    <div class="fullscreen-gallery__inner-slider-card-text">
+                                        <p>
+                                            Прозрачное гибкое стекло имеет широкий спектр применения, благодаря удобному
+                                            использованию и долгому сроку эксплуатации. Силиконовая скатерть «гибкое
+                                            стекло»
+                                            гарантирует сохранность абсолютно любой застилаемой мебели, как домашней,
+                                            так и
+                                            офисной мебели.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn fullscreen-gallery__inner-slider-card-link">
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fullscreen-gallery__inner-slider-card">
+                                    <div class="fullscreen-gallery__inner-slider-card-category">
+                                        кухонные столы
+                                    </div>
+                                    <div class="fullscreen-gallery__inner-slider-card-text">
+                                        <p>
+                                            Прозрачное гибкое стекло имеет широкий спектр применения, благодаря удобному
+                                            использованию и долгому сроку эксплуатации.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn fullscreen-gallery__inner-slider-card-link">
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fullscreen-gallery__inner-slider-card">
+                                    <div class="fullscreen-gallery__inner-slider-card-category">
+                                        кухонные столы
+                                    </div>
+                                    <div class="fullscreen-gallery__inner-slider-card-text">
+                                        <p>
+                                            Прозрачное гибкое стекло имеет широкий спектр применения, благодаря удобному
+                                            использованию и долгому сроку эксплуатации. Силиконовая скатерть «гибкое
+                                            стекло»
+                                            гарантирует сохранность абсолютно любой застилаемой мебели, как домашней,
+                                            так и
+                                            офисной мебели.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn fullscreen-gallery__inner-slider-card-link">
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fullscreen-gallery__inner-slider-card">
+                                    <div class="fullscreen-gallery__inner-slider-card-category">
+                                        кухонные столы
+                                    </div>
+                                    <div class="fullscreen-gallery__inner-slider-card-text">
+                                        <p>
+                                            Прозрачное гибкое стекло имеет широкий спектр применения, благодаря удобному
+                                            использованию и долгому сроку эксплуатации.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn fullscreen-gallery__inner-slider-card-link">
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fullscreen-gallery__inner-slider-card">
+                                    <div class="fullscreen-gallery__inner-slider-card-category">
+                                        кухонные столы
+                                    </div>
+                                    <div class="fullscreen-gallery__inner-slider-card-text">
+                                        <p>
+                                            Прозрачное гибкое стекло имеет широкий спектр применения, благодаря удобному
+                                            использованию и долгому сроку эксплуатации. Силиконовая скатерть «гибкое
+                                            стекло»
+                                            гарантирует сохранность абсолютно любой застилаемой мебели, как домашней,
+                                            так и
+                                            офисной мебели.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn fullscreen-gallery__inner-slider-card-link">
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullscreen-gallery__arrows">
+                    <button class="fullscreen-gallery__arrow fullscreen-gallery__arrow--prev" type="button">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-thin-left">
+                            <use xlink:href="#arrow-thin-left"></use>
+                        </svg>
+                    </button>
+                    <button class="fullscreen-gallery__arrow fullscreen-gallery__arrow--next" type="button">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-thin-right">
+                            <use xlink:href="#arrow-thin-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="table-comparison">
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <div class="table-comparison__heading">
+                            Силиконовая скатерть на стол<br> - купить выгодно
+                            <img src="img/logo-dark.svg" alt="" class="table-comparison__heading-logo">
+                        </div>
+
+                    </th>
+                    <th>
+                        <div class="table-comparison__heading">
+                            Аналоги без сертификации, не пищевые
+                        </div>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Высокая прозрачность — 100%
+                    </td>
+                    <td>
+                        Низкая прозрачность — 70%
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Идеальное прилегание к поверхности
+                    </td>
+                    <td>
+                        Бугрится, есть искажение прозрачности
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Термостойкость — до +100 °C
+                    </td>
+                    <td>
+                        Термостойкость — до +70 °C
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Безопасность и экологичность — нет посторонних запахов
+                    </td>
+                    <td>
+                        Постоянный неприятный запах
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Простота ухода — достаточно влажной салфетки, без разводов
+                    </td>
+                    <td>
+                        Сложность в уходе — если загрязнение не убрать сразу, остается надолго
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Высокая эластичность — позволяет свернуть ее в рулон
+                    </td>
+                    <td>
+                        Низкая устойчивость к механическим повреждениям
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Срок службы 20 лет
+                    </td>
+                    <td>
+                        Срок службы до 1 года(сохнет и рассыпается)
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Антистатическое покрытие — не прилипают крошки
+                    </td>
+                    <td>
+                        Постоянная статика
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Наличие сертификата, ГОСТа
+                    </td>
+                    <td>
+                        Отсутствие сертификата
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Защита от ультрафиолета
+                    </td>
+                    <td>
+                        Темнеет через 3-4 месяца
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Отсутсвуют химические фталаты
+                    </td>
+                    <td>
+                        Возможно присутствие фталатов
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Пищевой стандарт
+                    </td>
+                    <td>
+                        Нет пищевого стандарта
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Жесткость 52PHR
+                    </td>
+                    <td>
+                        Жесткость 30PHR
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<section class="advantage">
+    <div class="container">
+        <div class="advantage__row">
+            <div class="advantage__col">
+                <h2 class="advantage__heading">
+                    Прозрачная скатерть «мягкое стекло» не скрывает поверхность стола
+                </h2>
+            </div>
+            <div class="advantage__col">
+                <div class="advantage__text">
+                    <p>
+                        Под мягким стеклом будет отлично просматриваться красивый дизайн вашей мебели. Защитное покрытие
+                        идеально лежит на поверхности стола и не ерзает!
+                    </p>
+                </div>
+                <a href="#" class="btn advantage__link">
+                    Рассчитать стоимость
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="glass">
+    <div class="container">
+        <div class="glass__card">
+            <div class="glass__card-top-row">
+                <div class="glass__card-col">
+                    <h2 class="section-heading glass__card-heading">
+                        Мягкое стекло на стол бывает 2-х видов
+                    </h2>
+                </div>
+                <div class="glass__card-col">
+                    <div class="glass__card-text">
+                        <p>
+                            В настоящий момент доступны следующие варианты защитных пленок «мягкое стекло»: прозрачноеи
+                            рифленое. Толщина скатерти — мягкое стекло 2 мм.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass__card-bottom-row">
+                <div class="glass__card-inner">
+                    <div class="glass__card-inner-bg">
+                        <img src="img/glass-card-inner-1.jpg" alt="" class="glass__card-inner-bg-image">
+                    </div>
+                    <div class="glass__card-heading-block">
+                        <div class="glass__card-heading-block-content">
+                            <div class="glass__card-heading-block-type">
+                                Силиконовая скатерть<br>
+                                жидкое стекло
+                            </div>
+                            <h3 class="glass__card-heading-block-name">
+                                Рифленая
+                            </h3>
+                        </div>
+                        <img src="img/glass-icon-1.svg" alt="" class="glass__card-heading-block-icon">
+                    </div>
+                    <a href="#" class="btn glass__card-link">
+                        Заказать скатерть
+                    </a>
+                    <div class="glass__card-description">
+                        <p>
+                            Рифление с внутренней стороны пленки, а с внешней стороны – глянцевая. Идеально подойдет для
+                            стеклянных и глянцевых поверхностей, под ней не образуются пузыри воздуха. Рифленая
+                            силиконовая скатерть полупрозрачна, она отлично скроет дефекты поверхности.
+                        </p>
+                    </div>
+                </div>
+                <div class="glass__card-inner">
+                    <div class="glass__card-inner-bg">
+                        <img src="img/glass-card-inner-2.jpg" alt="" class="glass__card-inner-bg-image">
+                    </div>
+                    <div class="glass__card-heading-block">
+                        <div class="glass__card-heading-block-content">
+                            <div class="glass__card-heading-block-type">
+                                Силиконовая скатерть<br>
+                                жидкое стекло
+                            </div>
+                            <h3 class="glass__card-heading-block-name">
+                                Глянцевая
+                            </h3>
+                        </div>
+                        <img src="img/glass-icon-2.svg" alt="" class="glass__card-heading-block-icon">
+                    </div>
+                    <a href="#" class="btn glass__card-link">
+                        Заказать скатерть
+                    </a>
+                    <div class="glass__card-description">
+                        <p>
+                            Скатерть жидкое стекло гармонично сочетаетсяс текстильными изделиями, камнем и столешницами
+                            из натуральной древесины. Отсутствие рисунка позволяет применять жидкое стекло даже в любых
+                            интерьерах, оно добавит элегантности вашей мебели.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="thickness">
+    <div class="container">
+        <h2 class="section-heading thickness__heading">
+            Силиконовая скатерть на стол – Какую толщину выбрать?
+        </h2>
+        <ul class="thickness__list">
+            <li class="thickness__list-item">
+                <div class="thickness__card">
+                    <img src="img/thickness/1.svg" alt="" class="thickness__card-icon">
+                    <h4 class="thickness__card-title">
+                        Силиконовая скатерть 1 мм на стол прозрачная придаст поверхности новизну
+                    </h4>
+                    <div class="thickness__card-text">
+                        <p>
+                            Подойдет для поверхностей с низким износом - комоды, подоконники, тумбочки и т.д. Мягкое
+                            стекло на стол– гарантированно защитит предметы интерьера от царапини прочих повреждений.
+                        </p>
+                    </div>
+                    <div class="thickness__card-price">
+                        <h5 class="thickness__card-price-title">
+                            Стоимость
+                        </h5>
+                        <div class="thickness__card-price-amount">
+                            от 720₽ / 1м2
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="thickness__list-item">
+                <div class="thickness__card">
+                    <img src="img/thickness/2.svg" alt="" class="thickness__card-icon">
+                    <h4 class="thickness__card-title">
+                        Силиконовая скатерть 1,5 мм скроет уже имеющиеся дефекты
+                    </h4>
+                    <div class="thickness__card-text">
+                        <p>
+                            Для таких поверхностей, как офисные столы, школьные парты, детскиестолики рекомендуем брать
+                            силиконовую скатерть 1,5 мм. Под прозрачным стеклом удобнохранить школьное расписаниеи
+                            стикеры с заметками.
+                        </p>
+                    </div>
+                    <div class="thickness__card-price">
+                        <h5 class="thickness__card-price-title">
+                            Стоимость
+                        </h5>
+                        <div class="thickness__card-price-amount">
+                            от 950₽ / 1м2
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="thickness__list-item">
+                <div class="thickness__card">
+                    <img src="img/thickness/3.svg" alt="" class="thickness__card-icon">
+                    <h4 class="thickness__card-title">
+                        Силиконовая скатерть 2 ммне изменит дизайн вашего стола
+                    </h4>
+                    <div class="thickness__card-text">
+                        <p>
+                            Самая оптимальная толщина защитной пленки для кухонных столов 2 мм.Такая защитная пленка не
+                            скрывает красоту стола, но при этом надежно защищает его. Мягкое стекло можно применить как
+                            защиту напольного покрытия под компьютерное кресло.
+                        </p>
+                    </div>
+                    <div class="thickness__card-price">
+                        <h5 class="thickness__card-price-title">
+                            Стоимость
+                        </h5>
+                        <div class="thickness__card-price-amount">
+                            от 1080₽ / 1м2
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="special">
+    <img src="img/special-bg.jpg" alt="" class="special__bg-image">
+    <div class="container">
+        <h2 class="section-heading special__heading">
+            Специальное предложение
+        </h2>
+        <ul class="special__promo-list">
+            <li class="special__promo-list-item">
+                <a href="#" class="special__promo-card">
+                    <img src="img/special/special-icon-1.svg" alt="" class="special__promo-card-icon">
+                    <div class="special__promo-card-amount">
+                        20%
+                    </div>
+                    <h4 class="special__promo-card-title">
+                        При заказе 2-х полотен получите скидку 20%
+                    </h4>
+                </a>
+            </li>
+            <li class="special__promo-list-item">
+                <a href="#" class="special__promo-card">
+                    <img src="img/special/special-icon-2.svg" alt="" class="special__promo-card-icon">
+                    <div class="special__promo-card-amount">
+                        30%
+                    </div>
+                    <h4 class="special__promo-card-title">
+                        При заказе 3-х полотен получите скидку 30%
+                    </h4>
+                </a>
+            </li>
+            <li class="special__promo-list-item">
+                <a href="#" class="special__promo-card">
+                    <img src="img/special/special-icon-3.svg" alt="" class="special__promo-card-icon">
+                    <div class="special__promo-card-amount">
+                        Подарок
+                    </div>
+                    <h4 class="special__promo-card-title">
+                        При заказе 3+ — индвидуальное предложение
+                    </h4>
+                </a>
+            </li>
+            <li class="special__promo-list-item">
+                <a href="#" class="special__get-discount">
+                    Получить скидку
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="surface-types">
+    <div class="container">
+        <h2 class="section-heading surface-types__heading">
+            Как выглядит силиконовая скатерть на разных поверхностях
+        </h2>
+        <div class="surface-types__slider js-surface-types-slider">
+            <div class="surface-types__slider-width-wrapper">
+                <div class="surface-types__slider-wrapper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="surface-types__slider-card">
+                                    <img src="img/product-type.jpg" alt="" class="surface-types__slider-card-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="surface-types__slider-card">
+                                    <img src="img/product-type.jpg" alt="" class="surface-types__slider-card-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="surface-types__slider-card">
+                                    <img src="img/product-type.jpg" alt="" class="surface-types__slider-card-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="surface-types__slider-card">
+                                    <img src="img/product-type.jpg" alt="" class="surface-types__slider-card-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="surface-types__slider-card">
+                                    <img src="img/product-type.jpg" alt="" class="surface-types__slider-card-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="surface-types__slider-controls">
+                <div class="surface-types__slider-nav">
+                    <a href="#" class="surface-types__slider-nav-link">
+                        Стеклянный стол
+                    </a>
+                    <a href="#" class="surface-types__slider-nav-link">
+                        Шпонированный стол
+                    </a>
+                    <a href="#" class="surface-types__slider-nav-link">
+                        Стол из МДФ
+                    </a>
+                    <a href="#" class="surface-types__slider-nav-link">
+                        Лакированный стол
+                    </a>
+                    <a href="#" class="surface-types__slider-nav-link">
+                        Крашенный стол
+                    </a>
+                </div>
+                <div class="surface-types__slider-arrows">
+                    <button class="surface-types__slider-arrow surface-types__slider-arrow--prev">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-thin-left">
+                            <use xlink:href="#arrow-thin-left"></use>
+                        </svg>
+                    </button>
+                    <button class="surface-types__slider-arrow surface-types__slider-arrow--next">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-thin-right">
+                            <use xlink:href="#arrow-thin-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="surface-types__row">
+            <div class="surface-types__col">
+                <h3 class="surface-types__small-heading">
+
+                    Скатерть прозрачная экологична и безопасна
+                </h3>
+                <div class="surface-types__text">
+                    <p>
+                        Подойдет для поверхностей с низким износом — комоды, подоконники, тумбочки и т.д. Мягкое стекло
+                        на стол гарантированно защитит предметы интерьераот царапин и прочих повреждений.
+                    </p>
+                </div>
+            </div>
+            <div class="surface-types__col">
+                <ul class="surface-types__advantages-list">
+                    <li class="surface-types__list-item">
+                        <div class="surface-types__advantages-card">
+                            <img src="img/surface-type/surface-type-icon-1.svg" alt=""
+                                class="surface-types__advantages-card-icon">
+                            <div class="surface-types__advantages-card-text">
+                                <p>
+                                    Силиконовая скатерть на квадратный
+                                    стол
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surface-types__list-item">
+                        <div class="surface-types__advantages-card">
+                            <img src="img/surface-type/surface-type-icon-2.svg" alt=""
+                                class="surface-types__advantages-card-icon">
+                            <div class="surface-types__advantages-card-text">
+                                <p>
+                                    Скатерть гибкое стекло на круглый стол
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surface-types__list-item">
+                        <div class="surface-types__advantages-card">
+                            <img src="img/surface-type/surface-type-icon-3.svg" alt=""
+                                class="surface-types__advantages-card-icon">
+                            <div class="surface-types__advantages-card-text">
+                                <p>
+                                    Пленка жидкое стекло на овальный стол
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="why-us">
+    <div class="container">
+        <div class="why-us__top-row">
+            <div class="why-us__content">
+                <h2 class="section-heading why-us__heading">
+                    Почему покупают именно у нас?
+                </h2>
+                <div class="why-us__text">
+                    <p>
+                        Будьте внимательны через заказы через интернет. Если вы введете в поиске «силиконовая скатерть
+                        на
+                        стол прозрачная купить», то обнаружите массу предложений, не все из которых вас порадуют высоким
+                        качеством. Наша компания предлагает прозрачные скатерти только из пищевого ПВХ.
+                    </p>
+                </div>
+                <div class="why-us__warning">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                        <use xlink:href="#info"></use>
+                    </svg>
+                    <div class="why-us__warning-text">
+                        <p>
+                            Силиконовая скатерть GALAXY содержит ингибиторы, предотвращающие разложение на канцерогенные
+                            вещества под воздействием горячей посуды до 700С
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="img/why-us-doc.jpg" alt="" class="why-us__certificate">
+        </div>
+        <ul class="why-us__benefits-list">
+            <li class="why-us__benefits-list-item">
+                <img src="img/why-us/1.png" alt="" class="why-us__benefits-icon">
+                <h4 class="why-us__benefits-title">
+                    Подходящие по форме
+                </h4>
+                <div class="why-us__benefits-text">
+                    <p>
+                        Легко вырезаются
+                    </p>
+                </div>
+            </li>
+            <li class="why-us__benefits-list-item">
+                <img src="img/why-us/2.svg" alt="" class="why-us__benefits-icon">
+                <h4 class="why-us__benefits-title">
+                    Долговечные
+                </h4>
+                <div class="why-us__benefits-text">
+                    <p>
+                        При должном уходе прослужат не менее 10 лет
+                    </p>
+                </div>
+            </li>
+            <li class="why-us__benefits-list-item">
+                <img src="img/why-us/3.svg" alt="" class="why-us__benefits-icon">
+                <h4 class="why-us__benefits-title">
+                    Антистатическое покрытие
+                </h4>
+                <div class="why-us__benefits-text">
+                    <p>
+                        Не липнут крошки
+                    </p>
+                </div>
+            </li>
+            <li class="why-us__benefits-list-item">
+                <img src="img/why-us/4.svg" alt="" class="why-us__benefits-icon">
+                <h4 class="why-us__benefits-title">
+                    Без запаха
+                </h4>
+                <div class="why-us__benefits-text">
+                    <p>
+                        Отсутствие фталатов
+                        в составе исключают едкий запах
+                    </p>
+                </div>
+            </li>
+            <li class="why-us__benefits-list-item">
+                <img src="img/why-us/5.png" alt="" class="why-us__benefits-icon">
+                <h4 class="why-us__benefits-title">
+                    Прочность
+                </h4>
+                <div class="why-us__benefits-text">
+                    <p>
+                        Толщиной 1-2 мм, которые нельзя случайно порезать ножом
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <div class="why-us__difference">
+            <h3 class="why-us__difference-heading">
+                В отличие от китайских покрытий наша прозрачная пленка на стол имеет плотную структуру (сложно прорезать
+                насквозь), нет едкого запаха, не слипается!
+            </h3>
+            <ul class="why-us__difference-list">
+                <li class="why-us__difference-list-item">
+                    Прозрачная пленка отлично лежит под собственным весом, не скользит.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Защитная прозрачная пленка на стол экологична,не токсична и соотвествует российскому стандарту.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Жидкое стекло на столе не мнется.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Мягкое стекло на стол имеет сертификат соответствия.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Не боится случайно пролитого кипятка.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Комфортный температурный режим – +70 °C . Под очень горячую посуду желательно подкладывать салфетки
+                    во избежании повреждения слоя ламинации.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Со скатерти из мягкого стекла легко удаляется грязь, не въедаются жирные пятна.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Цена защитной пленки гибкое стекло начинается от 720₽, зависит от толщины и размера полотна.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Так как защитная пленка ПВХ мягкое стекло несет защитную функцию, то его внешний вид может
+                    ухудшаться.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Защитная пленка прозрачная внешне напоминает силикон, поэтому ее еще называют «силиконовая пленка»,
+                    но она не мутнеет и обладает повышенными прочностными характеристиками.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Скатерть гибкое стекло на стол Legato имеет бирюзово-синий оттенок, визуальноне заметный глазу,
+                    который предотвращает выцветание и помутнение материала.
+                </li>
+                <li class="why-us__difference-list-item">
+                    Легко подрезается после усадки.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="how-to-choose">
+    <div class="container">
+        <div class="how-to-choose__row">
+            <div class="how-to-choose__card">
+                <img data-src="img/table.png" alt="" class="how-to-choose__card-table lazyload">
+                <h2 class="section-heading how-to-choose__card-heading">
+                    Прозрачная скатерть на стол — есть вопросы?
+                </h2>
+                <div class="how-to-choose__card-text">
+                    <p>
+                        Остались вопросы по поводу прозрачной скатерти на стол? Мы готовы ответить на все ваши вопросыи
+                        дать совет по выбору толщины скатерти.
+                    </p>
+                </div>
+                <div class="how-to-choose__card-btns">
+                    <a href="#" class="btn how-to-choose__card-btn">
+                        Рассчитать стоимость
+                    </a>
+                    <a href="#" class="how-to-choose__card-btn how-to-choose__card-write-btn">
+                        Написать нам
+                    </a>
+                </div>
+            </div>
+            <div class="how-to-choose__sale">
+                <div class="how-to-choose__sale-text">
+                    <p>
+                        Оформите заказ до конца марта и получите скидку 13%
+                    </p>
+                </div>
+                <div class="how-to-choose__sale-amount">
+                    <div class="how-to-choose__sale-amount-number">
+                        13%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="calculator">
+    <div class="container">
+        <div class="calculator__card">
+            <div class="calculator__card-col">
+                <h2 class="section-heading calculator__heading">
+                    Купить силиконовую скатерть выгодно!
+                </h2>
+                <div class="calculator__text">
+                    <p>
+                        Расчитать стоимость силиконовой скатерти вы можете воспользовавшись нашим
+                        онлайн-калькулятором.Для расчета стоимости пленки уточните размеры вашего стола.
+                    </p>
+                </div>
+                <a href="#" class="calculator__do-not-know">
+                    Не знаю свои параметры
+                </a>
+                <img src="img/calculator-illustration.png" alt="" class="calculator__illustration">
+            </div>
+            <div class="calculator__card-col">
+                <form action="/" method="POST" class="calculator__form">
+                    <div class="calculator__form-fields">
+
+
+                        <div class="calculator__form-field calculator__form-field--fullwidth">
+                            <div class="calculator__form-field-label">
+                                Форма стола
+                            </div>
+                            <div class="calculator__form-select">
+                                <select name="form" class="js-custom-select">
+                                    <option value="" placeholder>
+                                        Форма стола
+                                    </option>
+                                    <option value="1">
+                                        Квадратный стол
+                                    </option>
+                                    <option value="2">
+                                        Овальный стол
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calculator__form-field">
+                            <label for="length" class="calculator__form-field-label">
+                                Длина
+                            </label>
+                            <input type="tel" class="calculator__form-input js-numeric-input" placeholder="см"
+                                id="length">
+                        </div>
+                        <div class="calculator__form-field">
+                            <label for="width" class="calculator__form-field-label">
+                                Ширина
+                            </label>
+                            <input type="tel" class="calculator__form-input js-numeric-input" placeholder="см"
+                                id="width">
+                        </div>
+
+                        <div class="calculator__form-field calculator__form-field--fullwidth">
+                            <label for="thickness" class="calculator__form-field-label">
+                                Толщина
+                            </label>
+                            <div class="calculator__form-select">
+                                <select name="form" class="js-custom-select">
+                                    <option value="" placeholder>
+                                        Толщина
+                                    </option>
+                                    <option value="1">
+                                        1 мм
+                                    </option>
+                                    <option value="2">
+                                        2 мм
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="calculator__form-field">
+                            <label for="yourname" class="calculator__form-field-label">
+                                Имя
+                            </label>
+                            <input type="text" class="calculator__form-input js-numeric-input" placeholder="Имя"
+                                name="yourname">
+                        </div>
+                        <div class="calculator__form-field">
+                            <label for="yourphone" class="calculator__form-field-label">
+                                Телефон
+                            </label>
+                            <input type="tel" class="calculator__form-input js-phone-input" placeholder="Телефон"
+                                name="yourphone">
+                        </div>
+                        <div class="calculator__form-field calculator__form-field--fullwidth">
+                            <label class="calculator__form-field-checkbox">
+                                <input type="checkbox" class="calculator__form-field-checkbox-input">
+                                <span class="calculator__form-field-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+
+                                </span>
+                                <span class="calculator__form-field-checkbox-text">
+                                    Соглашение с политикой конфиденциальности
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="calculator__form-price">
+                        <div class="calculator__form-price-new">
+                            2100₽ 
+                        </div>
+                        <div class="calculator__form-price-old">
+                            2230₽
+                        </div>
+                    </div>
+                    <button class="btn calculator__form-submit" type="submit">
+
+                        Заказать скатерть
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="advantage">
+    <img src="img/advantage-bg.jpg" alt="" class="advantage__bg-image">
+    <div class="container">
+        <div class="advantage__row">
+            <div class="advantage__col">
+                <h2 class="advantage__heading">
+                    Поможем правильно измерить стол для заказа силиконовой скатерти
+                </h2>
+            </div>
+            <div class="advantage__col">
+                <div class="advantage__text">
+                    <p>
+                        Для вашего удобства мы подготовили инструкцию,в которой подробно рассказываем, как верно
+                        определить размеры стола, чтобы безошибочно заказать скатерть.
+                    </p>
+                </div>
+                <a href="#" class="btn advantage__link">
+                    Получить инструкцию
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="container">
+        <h2 class="section-heading reviews__heading">
+            Гибкое стекло для стола - наши отзывы
+        </h2>
+        <div class="reviews__text">
+            <p>
+                Отзывы покупателей, которые уже заказли гибкое стекло на стол. Мы прилагаем максимум усилий, чтобы
+                соответсвовать вашему доверию. Мы рады, что вы уже оценили качество нашей скатерти «гибкое стекло».
+            </p>
+        </div>
+        <div class="reviews__slider js-reviews-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="reviews__slider-card">
+                            <div class="reviews__slider-card-bg">
+                                <img src="img/reviews/1.jpg" alt="" class="reviews__slider-card-bg-image">
+                            </div>
+                            <div class="reviews__slider-card-author">
+                                Сергей, г. Нижнекамск
+                            </div>
+                            <h4 class="reviews__slider-card-title">
+                                Скатерть отлично вписалась в интерьер, семья довольна
+                            </h4>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="reviews__slider-card">
+                            <div class="reviews__slider-card-bg">
+                                <img src="img/reviews/2.jpg" alt="" class="reviews__slider-card-bg-image">
+                            </div>
+                            <div class="reviews__slider-card-author">
+                                Мария, г. Санкт-Питербург
+                            </div>
+                            <h4 class="reviews__slider-card-title">
+                                В точности подошла по форме на нашего стола
+                            </h4>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="reviews__slider-card">
+                            <div class="reviews__slider-card-bg">
+                                <img src="img/reviews/3.jpg" alt="" class="reviews__slider-card-bg-image">
+                            </div>
+                            <div class="reviews__slider-card-author">
+                                Анастасия, г. Пермь
+                            </div>
+                            <h4 class="reviews__slider-card-title">
+                                Абсолютно ничего не прилипает, очень удобно
+                            </h4>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="reviews__slider-card">
+                            <div class="reviews__slider-card-bg">
+                                <img src="img/reviews/4.jpg" alt="" class="reviews__slider-card-bg-image">
+                            </div>
+                            <div class="reviews__slider-card-author">
+                                Елена, г. Магнитогорск
+                            </div>
+                            <h4 class="reviews__slider-card-title">
+                                Силиконовая скатерть стала полезным подарком
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__slider-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="delivery">
+    <div class="container">
+        <div class="delivery__row">
+            <div class="delivery__col">
+                <h2 class="section-heading delivery__heading">
+                    Пленку для стола доставить просто!
+                </h2>
+                <div class="delivery__text">
+                    <p>
+                        Почему пленку на стол заказывают именно у нас? Приобрести силиконовую пленку можно абсолютно без
+                        риска - вам не нужно переводить деньги заранее, оплачивать мягкое стекло на стол Вы будете
+                        исключительно при получении, убедившись в его качестве.
+                    </p>
+                </div>
+            </div>
+            <div class="delivery__col">
+                <ul class="delivery__features-list">
+                    <li class="delivery__features-list-item">
+                        <h4 class="delivery__features-title">
+                            Мягкое гибкое стекло на стол – купить могут как юр. лица так и физ. лица
+                        </h4>
+                        <div class="delivery__features-text">
+                            Мы работаем с физическими и юридическими лицами на основании двустороннего договора. С
+                            организациями работаем через расчетный счет, что обеспечивает вам дополнительные гарантии и
+                            снижает риски.
+                        </div>
+                    </li>
+                    <li class="delivery__features-list-item">
+                        <h4 class="delivery__features-title">
+                            Мягкое стекло для стола – отпраляем СДЕК и Почтой России
+                        </h4>
+                        <div class="delivery__features-text">
+                            Вырезаем пленку на стол в день заказа по Вашим размерам, собираем заказ в максимально
+                            быстрые сроки и гарантируем Вам качество упаковки!
+                        </div>
+                    </li>
+                </ul>
+                <ul class="delivery__options-list">
+                    <li class="delivery__options-list-item">
+                        <img src="img/post.jpg" alt="" class="delivery__options-logo">
+                        <div class="delivery__options-price">
+                            <strong>
+                                Стоимость
+                            </strong><br>
+
+                            от 300₽
+                        </div>
+                    </li>
+                    <li class="delivery__options-list-item">
+                        <img src="img/cdek.png" alt="" class="delivery__options-logo">
+                        <div class="delivery__options-price">
+                            <strong>
+                                Стоимость
+                            </strong><br>
+
+                            от 300₽
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <h2 class="faq__heading">
+            Наш эксперт отвечает на самые главные вопросы
+        </h2>
+        <div class="faq__row">
+            <div class="faq__col">
+                <ul class="faq__questions-list">
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Какое качество вы гарантируете?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Какая страна производитель вашего стекла?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Делаете ли вы запас на усадку?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Как осуществляется доставка и оплата?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Как уложить мягкое стекло?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="faq__col">
+                <ul class="faq__questions-list">
+
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Как отрезать лишнее?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Как ухаживать за покрытием?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Каков гарантированный срок службы?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    В чем отличие по толщине?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__questions-list-item">
+                        <div class="faq__questions-accordion js-faq-accordion">
+                            <div class="faq__questions-accordion-btn">
+                                <div class="faq__questions-accordion-btn-text">
+                                    Каков срок гарантии?
+                                </div>
+                                <div class="faq__questions-accordion-btn-cross">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="faq__questions-accordion-content">
+                                <div class="faq__questions-accordion-content-inner">
+                                    <p>
+                                        Наше мягкое стекло изготавливается в Южной Корее, что выделяет нас среди
+                                        конкурентов и
+                                        обладает премиальным качеством и сроком службы свыше 20 лет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="features__row">
+            <div class="features__col">
+                <h2 class="section-heading features__heading">
+                    Пленка гибкое стекло – популярна в странах запада
+                </h2>
+                <div class="features__text">
+                    <p>
+                        Возможна отправка силиконовой скатерти «гибкое стекло» по всему миру DHL. Быстрая доставка по
+                        всей России курьером, в пункты выдачи СДЭК или почтой.
+                    </p>
+                </div>
+                <div class="features__images-gallery">
+                    <div class="features__images-gallery-card">
+                        <img src="img/features/1.jpg" alt="" class="features__images-gallery-card-photo">
+                    </div>
+                    <div class="features__images-gallery-card">
+                        <img src="img/features/2.jpg" alt="" class="features__images-gallery-card-photo">
+                    </div>
+                    <div class="features__images-gallery-card">
+                        <img src="img/features/3.jpg" alt="" class="features__images-gallery-card-photo">
+                    </div>
+                    <div class="features__images-gallery-card">
+                        <img src="img/features/4.jpg" alt="" class="features__images-gallery-card-photo">
+                    </div>
+                </div>
+            </div>
+            <div class="features__col">
+                <ul class="features__list">
+                    <li class="features__list-item">
+                        <div class="features__card">
+                            <h4 class="features__card-title">
+                                Мягкое стекло для стола отпраляем СДЕК и Почтой России
+                            </h4>
+                            <div class="features__card-text">
+                                <p>
+                                    Стекло на стол LEGATO давно получило признание
+                                    на Западе. Популярность скатерти «жидкое стекло» объясняется тем, что постелив ее на
+                                    стол Вы надежно защитите Вашу мебель от повреждений и при этом красота столешницы
+                                    останется видимой.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="features__list-item">
+                        <div class="features__card">
+                            <h4 class="features__card-title">
+                                Пленка ПВХ на стол – гибкая скатерть
+                            </h4>
+                            <div class="features__card-text">
+                                <p>
+                                    Прозрачная скатерть за последние пару лет успела завоевать популярность и в России.
+                                    Мы уверены, что Вы оцените по достоинству, как и наши зарубежные клиенты, нашу
+                                    пленку
+                                    ПВХ на стол за ее практичность и долговечность.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="features__list-item">
+                        <div class="features__card">
+                            <h4 class="features__card-title">
+                                Клеенка на стол прозрачная – защитная накладка
+                            </h4>
+                            <div class="features__card-text">
+                                <p>
+                                    Защитная накладка - это то, что Вам нужно! Это современный, инновационный материал,
+                                    который отличается прочностью, эстетичным внешним видом и доступной ценой.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="features__list-item">
+                        <div class="features__card">
+                            <h4 class="features__card-title">
+                                Скатерть жидкое стекло на стол – защитная пленка пвх
+                            </h4>
+                            <div class="features__card-text">
+                                <p>
+                                    Защитная пленки ПВХ- мечта каждой хозяйки. Скатерть «жидкое стекло» на стол
+                                    привнесет в Ваш дом уют и красоту!
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<section class="how-to-choose">
+    <div class="container">
+        <div class="how-to-choose__row">
+            <div class="how-to-choose__card">
+                <img data-src="img/table.png" alt="" class="how-to-choose__card-table lazyload">
+                <h2 class="section-heading how-to-choose__card-heading">
+                    Не знаете как выбрать гибкое стекло?
+                </h2>
+                <div class="how-to-choose__card-text">
+                    <p>
+                        Заполните форму и мы позвоним в удобное для вас время.
+                    </p>
+                </div>
+                <form action="/" method="POST" class="how-to-choose__card-form">
+                    <div class="how-to-choose__card-form-field">
+                        <input type="text" name="name" class="how-to-choose__card-form-input" required
+                            placeholder="Имя">
+                    </div>
+                    <div class="how-to-choose__card-form-field">
+                        <input type="tel" name="phone" class="how-to-choose__card-form-input js-phone-input" required
+                            data-parsley-phone placeholder="Телефон">
+                    </div>
+                    <div class="how-to-choose__card-form-policy">
+                        <p>
+                            Нажимая “Отправить”, вы соглашаетесь с политикой конфиденциальности
+                        </p>
+                    </div>
+                    <button class="btn how-to-choose__card-form-submit" type="submit">
+                        Заказать звонок
+                    </button>
+                </form>
+            </div>
+            <div class="how-to-choose__sale">
+                <div class="how-to-choose__sale-text">
+                    <p>
+                        При покупке двух скатертей дарим скидку 10%
+                    </p>
+                </div>
+                <div class="how-to-choose__sale-amount">
+                    <div class="how-to-choose__sale-amount-number">
+                        10%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="page-footer__top-row">
+                    <a href="#" class="page-footer__logo">
+                        <img src="img/logo-dark.svg" alt="" class="page-footer__logo-image">
+                    </a>
+                    <div class="page-footer__content">
+                        <div class="page-footer__copyright">
+                            <p>
+                                Все права на публикуемые на сайте материалы принадлежат Legato. Любая информация, представленная
+                                на данном сайте, носит исключительно информационный характер и ни при каких условиях не является
+                                публичной офертой, определяемой положениями статьи 437 ГК РФ.
+                            </p>
+                        </div>
+                        <div class="page-footer__contacts-block">
+                            <a href="tel:+74951299226" class="page-footer__phone-link">
+                                +7 (495) 129-92-26
+                            </a>
+                            <div class="page-footer__phone-link-text">
+                                Звонок бесплатный
+                            </div>
+                            <a href="#" class="page-footer__whats-app-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-whatsapp">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-footer__bottom-row">
+                    <a href="#" class="page-footer__bottom-link">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="page-footer__bottom-link">
+                        Условия использования
+                    </a>
+                    <a href="#" class="page-footer__made-by">
+                        Создание сайта
+                        <img src="img/mark-weber.svg" alt="" class="page-footer__made-by-image">
+                    </a>
+                </div>
+            </div>
+        </footer>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>
