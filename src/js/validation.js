@@ -27,6 +27,66 @@ window.Parsley.addValidator('requiredIfChecked', {
     },
     priority: 33,
 });
+window.Parsley.addValidator('requiredIfRound', {
+    requirementType: 'string',
+    validateString: function (value, requirement) {
+        console.log('Validating', value);
+
+        const formSelect = document.querySelector('#form-select');
+
+        if (!formSelect) {
+            console.error('No form select');
+            return true;
+        }
+
+        if (parseInt(formSelect.value, 10) !== 3) {
+            return true;
+        }
+
+        if (!value.trim()) {
+            return false;
+        } else {
+            return true;
+        }
+
+        
+    },
+    messages: {
+        en: 'Required field',
+        ru: 'Обязательное поле',
+    },
+    priority: 33,
+});
+window.Parsley.addValidator('requiredIfNotRound', {
+    requirementType: 'string',
+    validateString: function (value, requirement) {
+        console.log('Validating', value);
+
+        const formSelect = document.querySelector('#form-select');
+
+        if (!formSelect) {
+            console.error('No form select');
+            return true;
+        }
+
+        if (parseInt(formSelect.value, 10) === 3) {
+            return true;
+        }
+
+        if (!value.trim()) {
+            return false;
+        } else {
+            return true;
+        }
+
+        
+    },
+    messages: {
+        en: 'Required field',
+        ru: 'Обязательное поле',
+    },
+    priority: 33,
+});
 
 window.Parsley.addValidator('phone', {
     requirementType: 'string',

@@ -16,14 +16,33 @@
     user-select: none;
     border-radius: 2rem;
     border: 1px solid var(--primary-color);
+
+   
     &:link,
     &:visited {
         color: white;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &--hollow {
+        background-color: #fff;
+        color: var(--text-color);
+
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+
+    .no-touch &:not(.btn--hollow):hover,
+    .touch &:not(.btn--hollow):active {
         background-color: var(--primary-color-hover);
         border-color: var(--primary-color-hover);
+        color: white;
+    }
+
+    .no-touch &.btn--hollow:hover,
+    .touch &.btn--hollow:active {
+        background-color: var(--primary-color);
+        color: white;
     }
 }

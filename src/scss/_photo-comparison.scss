@@ -2,6 +2,10 @@
     padding: 10rem 0;
     position: relative;
     z-index: 100;
+    background-color: #F6F6F7;
+    .intro-animation & {
+        background: transparent;
+    }
 }
 
 .photo-comparison__card {
@@ -10,6 +14,8 @@
     background-color: #fff;
     border-radius: 3rem;
     overflow: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .photo-comparison__card-col {
@@ -44,7 +50,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--primary-color);
-
+    user-select: none;
     .cd-image-container {
         position: absolute;
         left: 0;

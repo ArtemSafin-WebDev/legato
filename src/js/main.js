@@ -15,6 +15,8 @@ import introAnimation from './introAnimation';
 import photoComparisonSlider from './photoComparisonSlider';
 import fullscreenGallery from './fullscreenGallery';
 import anchorLinks from './anchorLinks';
+import benefits from './benefits';
+import calculator from './calculator';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -34,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     fullscreenGallery();
     anchorLinks();
+
+    benefits();
+    calculator();
 });
 
 window.addEventListener('load', function() {

@@ -1,19 +1,19 @@
-
 import gsap from 'gsap';
 
+import { supportsPointerEvents } from 'detect-it';
+
 export default function photoComparisonSlider() {
-    
     const elements = Array.from(document.querySelectorAll('.js-photo-comparison-slider'));
 
     elements.forEach(element => {
         console.log('Slider element total width', element.offsetWidth);
         let dragging = false;
 
-        element.addEventListener('pointerdown', () => {
+        const pointerDown = () => {
             dragging = true;
-        })
+        };
 
-        element.addEventListener('pointermove', event => {
+        const pointerMove = event => {
             if (!dragging) return;
 
             const rect = event.currentTarget.getBoundingClientRect();
@@ -21,11 +21,11 @@ export default function photoComparisonSlider() {
 
             const width = event.currentTarget.offsetWidth;
 
-            let progress = Math.round(offsetX / width * 100) / 100
+            let progress = Math.round((offsetX / width) * 100) / 100;
 
             console.log('OffsetX', offsetX);
-            console.log('Offset width', width)
-            console.log('Progress', progress)
+            console.log('Offset width', width);
+            console.log('Progress', progress);
 
             if (progress > 1) {
                 progress = 1;
@@ -38,14 +38,26 @@ export default function photoComparisonSlider() {
                 '--percentage-shown': progress,
                 overwrite: true
             });
-        })
+        };
 
-        element.addEventListener('pointerup', () => {
+        const pointerUp = () => {
             dragging = false;
-        })
-      
-        element.addEventListener('pointercancel', () => {
-            dragging = false;
-        })
-    })
+        };
+
+        if (supportsPointerEvents) {
+            element.addEventListener('pointerdown', pointerDown);
+
+            element.addEventListener('pointermove', pointerMove);
+
+            element.addEventListener('pointerup', pointerUp);
+
+            element.addEventListener('pointercancel', pointerUp);
+        } else {
+            element.addEventListener('mousedown', pointerDown);
+
+            element.addEventListener('mousemove', pointerMove);
+
+            element.addEventListener('mouseup', pointerUp);
+        }
+    });
 }

@@ -20,7 +20,7 @@ export default function anchorLinks() {
                             ease: 'power2.out',
                             scrollTo: {
                                 y: elementToScroll,
-                                offsetY: window.stickyNav.height
+                                offsetY: document.querySelector('.page-header').offsetHeight
                             }
                         });
                     } else {

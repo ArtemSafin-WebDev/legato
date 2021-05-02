@@ -4,27 +4,32 @@
     top: 0;
     width: 100%;
     z-index: 400;
-    transition: background-color 0.2s, color .2s, box-shadow .2s;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
     color: white;
 
     &.fixed {
         background-color: white;
         color: var(--text-color);
-        box-shadow: 0 0 1rem rgba(black, .1);
+        box-shadow: 0 0 1rem rgba(black, 0.1);
     }
 }
 
 .page-header__row {
     display: flex;
-    align-items: center;
+
     padding: 4rem 0;
+    transition: padding 0.2s;
+    .page-header.fixed & {
+        padding: 1.7rem 0;
+    }
 }
 
 .page-header__logo {
     flex-shrink: 0;
     position: relative;
-    margin-right: 4rem;
+    margin-right: 3rem;
     flex-shrink: 0;
+    margin-top: 0.3rem;
 }
 
 .page-header__logo-image {
@@ -39,27 +44,43 @@
         top: 0;
         opacity: 0;
         visibility: hidden;
-        transition: opacity .2s, visibility 0s linear .2s;
-
+        transition: opacity 0.2s, visibility 0s linear 0.2s;
 
         .page-header.fixed & {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .2s, visibility .2s;
+            transition: opacity 0.2s, visibility 0.2s;
         }
     }
 }
 
 .page-header__menu {
-    align-self: flex-start;
     width: 50%;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+        transition: flex-grow 0.2s;
+    }
+
+    .page-header.fixed & {
+        &::before,
+        &::after {
+            flex-grow: 1;
+        }
+    }
 }
 
 .page-header__nav {
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .page-header__nav-link {
@@ -68,18 +89,19 @@
     line-height: 1.4rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-   
-    flex-shrink: 0;
-    margin: .5rem;
-    margin-right: 2rem;
-    color: white;
 
+    flex-shrink: 0;
+    margin: 0.5rem 1.5rem 0.5rem 0.5rem;
+
+    margin-left: 0;
+    color: white;
+    overflow: hidden;
+    display: block;
+    position: relative;
     &:link,
     &:visited {
         color: white;
     }
-
-   
 
     .page-header.fixed & {
         color: var(--text-color);
@@ -87,16 +109,34 @@
         &:visited {
             color: var(--text-color);
         }
-
-        .no-touch &:hover,
-        .touch &:active {
-            color: var(--primary-color);
-        }
     }
+
     &:last-child {
         margin-right: 0;
     }
 
+    &::before {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        transition: transform 0.25s;
+    }
+
+    .no-touch &:hover {
+        .page-header__nav-link-text {
+            transform: translateY(-100%);
+        }
+
+        &::before {
+            transform: translateY(-100%);
+        }
+    }
+}
+
+.page-header__nav-link-text {
+    transition: transform 0.25s;
 }
 
 .page-header__contacts-block {
@@ -108,7 +148,7 @@
     grid-template-areas: 'phone-link whatsapp-link' 'phone-link-text whatsapp-link';
     text-align: right;
     grid-column-gap: 2.2rem;
-    grid-row-gap: .5rem;
+    grid-row-gap: 0.5rem;
 }
 
 .page-header__phone-link {
@@ -138,7 +178,6 @@
     justify-self: flex-end;
     grid-area: phone-link-text;
 }
-
 
 .page-header__whats-app-link {
     width: 4.7rem;
