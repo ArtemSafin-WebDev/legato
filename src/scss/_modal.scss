@@ -87,6 +87,11 @@
     padding: 6rem;
     color: var(--text-color);
 
+    &--success {
+        max-width: 60rem;
+        text-align: center;
+    }
+
     @include breakpoint(small-tablet) {
         padding: 4rem;
     }
@@ -124,6 +129,14 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.9rem;
+    }
+}
+
+.modal__back-link {
+    margin-top: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 1rem;
     }
 }
 
@@ -222,4 +235,15 @@ textarea.modal__form-input  {
 
 .modal__form-submit {
     width: 100%;
+}
+
+
+.modal__success-checkmark {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    width: 9rem;
+    @include breakpoint(mobile) {
+        width: 6rem;
+        margin-bottom: 2rem;
+    }
 }

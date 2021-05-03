@@ -19,7 +19,7 @@ export default function svgRadius() {
             if (window.matchMedia("(max-width: 640px)").matches) {
                 rect.setAttributeNS(null, "rx", "10");
             } else {
-                rect.setAttributeNS(null, "rx", "20");
+                rect.setAttributeNS(null, "rx", "15");
             }
            
         })

@@ -1569,7 +1569,7 @@
 
             </div>
             <div class="calculator__card-col">
-                <form action="/" method="POST" class="calculator__form" data-need-validation>
+                <form action="/" method="POST" class="calculator__form" data-need-validation id="calculator-form">
                     <div class="calculator__form-fields">
 
 
@@ -2211,7 +2211,7 @@
                         Заполните форму и мы позвоним в удобное для вас время.
                     </p>
                 </div>
-                <form action="/" method="POST" class="how-to-choose__card-form" data-need-validation="">
+                <form action="/" method="POST" class="how-to-choose__card-form" data-need-validation="" id="contact-us-form">
                     <div class="how-to-choose__card-form-field how-to-choose__card-form-field--fullwidth-on-mobile">
                         <input type="text" name="name" class="how-to-choose__card-form-input" required
                             placeholder="Имя">
@@ -2306,7 +2306,7 @@
                         Заполните форму и мы свяжемся с вами в ближайшее время.
                     </p>
                 </div>
-                <form action="/" method="POST" class="modal__form" data-need-validation>
+                <form action="/" method="POST" class="modal__form" data-need-validation id="callback-form">
                     <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
                         <input type="name" class="modal__form-input" placeholder="Имя" required>
                     </div>
@@ -2347,7 +2347,7 @@
                         Заполните форму и мы свяжемся с вами в ближайшее время.
                     </p>
                 </div>
-                <form action="/" method="POST" class="modal__form" data-need-validation>
+                <form action="/" method="POST" class="modal__form" data-need-validation id="callback-form-simple">
                     <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
                         <input type="name" class="modal__form-input" placeholder="Имя" required>
                     </div>
@@ -2355,7 +2355,7 @@
                         <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required
                             data-parsley-phone>
                     </div>
-                  
+        
                     <div class="modal__form-field">
                         <div class="modal__form-field-policy">
                             <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
@@ -2367,6 +2367,31 @@
                         </button>
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="modal js-modal" id="success">
+        
+            <div class="modal__inner modal__inner--success">
+                <button class="modal__close-btn js-close-modal">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+        
+                </button>
+                <img src="img/modal-success-checkmark.svg" alt="" class="modal__success-checkmark">
+                <h2 class="modal__heading">
+                    Спасибо за заявку!
+                </h2>
+                <div class="modal__text">
+                    <p>
+                        Ваши данные успешно отправлены.
+                        Мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+                <a href="#" class="btn modal__back-link js-close-modal">
+                    Вернуться к просмотру
+                </a>
+        
             </div>
         </div>        <style>
             .ie-placeholder {

@@ -375,9 +375,9 @@
     text-align: right;
     grid-column-gap: 2.2rem;
     grid-row-gap: 0.5rem;
-
-    @include breakpoint(tablet) {
-        margin-left: auto;
+    margin-left: auto;
+    @include breakpoint(mobile) {
+        
         grid-template-areas: 'phone-link whatsapp-link';
         column-gap: .8rem;
         align-items: center;

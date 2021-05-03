@@ -247,6 +247,12 @@
     border-bottom: 1px solid var(--primary-color);
     display: inline-flex;
     align-self: flex-start;
+
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: inline-flex;
+    }
    
     &:link,
     &:visited {

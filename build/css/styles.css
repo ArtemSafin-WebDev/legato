@@ -1700,10 +1700,10 @@ select:-webkit-autofill:focus {
   grid-template-areas: 'phone-link whatsapp-link' 'phone-link-text whatsapp-link';
   text-align: right;
   grid-column-gap: 2.2rem;
-  grid-row-gap: 0.5rem; }
-  @media only screen and (max-width: 1024px) {
+  grid-row-gap: 0.5rem;
+  margin-left: auto; }
+  @media only screen and (max-width: 640px) {
     .page-header__contacts-block {
-      margin-left: auto;
       grid-template-areas: 'phone-link whatsapp-link';
       -webkit-column-gap: .8rem;
          -moz-column-gap: .8rem;
@@ -2471,7 +2471,7 @@ select:-webkit-autofill:focus {
   margin-top: 5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .how-to-choose__card-btns {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -2495,7 +2495,7 @@ select:-webkit-autofill:focus {
 .how-to-choose__card-btn {
   margin-right: 2.4rem;
   margin-top: 2rem; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .how-to-choose__card-btn {
       margin-right: 0; } }
   @media only screen and (max-width: 640px) {
@@ -3035,7 +3035,7 @@ select:-webkit-autofill:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 7.2rem; }
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 641px) {
     .glass__card-inner:nth-child(odd) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0; }
@@ -4535,7 +4535,13 @@ select:-webkit-autofill:focus {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-item-align: start;
-      align-self: flex-start; }
+      align-self: flex-start;
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .why-us__show-more-btn {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; } }
   .why-us__show-more-btn:link, .why-us__show-more-btn:visited {
     color: var(--primary-color); }
 
@@ -5995,6 +6001,9 @@ select:-webkit-autofill:focus {
   border-radius: 3rem;
   padding: 6rem;
   color: var(--text-color); }
+  .modal__inner--success {
+    max-width: 60rem;
+    text-align: center; }
   @media only screen and (max-width: 768px) {
     .modal__inner {
       padding: 4rem; } }
@@ -6028,6 +6037,12 @@ select:-webkit-autofill:focus {
     .modal__text {
       font-size: 1.4rem;
       line-height: 1.9rem; } }
+
+.modal__back-link {
+  margin-top: 3rem; }
+  @media only screen and (max-width: 640px) {
+    .modal__back-link {
+      margin-top: 1rem; } }
 
 .modal__form {
   display: grid;
@@ -6111,3 +6126,12 @@ textarea.modal__form-input {
 
 .modal__form-submit {
   width: 100%; }
+
+.modal__success-checkmark {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  width: 9rem; }
+  @media only screen and (max-width: 640px) {
+    .modal__success-checkmark {
+      width: 6rem;
+      margin-bottom: 2rem; } }
