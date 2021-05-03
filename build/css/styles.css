@@ -1066,6 +1066,9 @@ textarea {
   width: 100%;
   overflow: auto;
   height: 20rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   scrollbar-width: none; }
   textarea::-webkit-scrollbar {
     background-color: white;

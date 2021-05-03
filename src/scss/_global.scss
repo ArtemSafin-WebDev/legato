@@ -115,6 +115,8 @@ textarea {
     width: 100%;
     overflow: auto;
     height: 20rem;
+    -webkit-appearance: none;
+    appearance: none;
     @include customScrollbar();
 }
 

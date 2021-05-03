@@ -26,7 +26,7 @@ export default function anchorLinks() {
                         ease: 'power2.out',
                         scrollTo: {
                             y: elementToScroll,
-                            autoKill: true,
+                            autoKill: false,
                             offsetY: document.querySelector('.page-header').offsetHeight
                         }
                     });
