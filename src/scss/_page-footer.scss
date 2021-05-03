@@ -3,12 +3,29 @@
     padding-top: 7.5rem;
     padding-bottom: 10rem;
     color: var(--text-color);
+
+    @include breakpoint(mobile) {
+        padding-top: 5.5rem;
+        padding-bottom: 2.5rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .page-footer__top-row {
     margin-bottom: 6rem;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        margin-bottom: 0;
+        display: contents;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -18,12 +35,22 @@
     flex-shrink: 0;
     margin-right: 15rem;
     position: relative;
+    display: block;
+
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        margin: 0;
+        margin-bottom: 3.5rem;
+    }
 }
 
 .page-footer__logo-image {
     display: block;
     height: auto;
     width: 23rem;
+    @include breakpoint(mobile) {
+        width: 15.4rem;
+    }
 }
 
 .page-footer__content {
@@ -31,6 +58,14 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        align-items: initial;
+        flex-direction: column;
+        display: contents;
+    }
 }
 
 .page-footer__copyright {
@@ -39,9 +74,18 @@
     color: rgba(black, 0.2);
     width: 63rem;
     margin-right: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin: 0;
+        width: auto;
+        margin-bottom: 3rem;
+        order: 9;
+        margin-top: 1.8rem;
+        
+    }
 }
-
-
 
 .page-footer__contacts-block {
     flex-shrink: 0;
@@ -55,6 +99,16 @@
     grid-row-gap: 0.5rem;
     flex-shrink: 0;
     margin-left: auto;
+
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
+        text-align: left;
+        margin-bottom: 4rem;
+    }
 }
 
 .page-footer__phone-link {
@@ -65,11 +119,27 @@
     font-family: var(--nunito);
     grid-area: footer-phone-link;
     justify-self: flex-end;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        justify-self: initial;
+        margin-bottom: 0.3rem;
+    }
 }
 
 .page-footer__phone-link-text {
     justify-self: flex-end;
     grid-area: footer-phone-link-text;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
 }
 
 .page-footer__whats-app-link {
@@ -77,6 +147,10 @@
     height: 4.7rem;
     flex-shrink: 0;
     grid-area: footer-whatsapp-link;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     svg {
         width: 100%;
         height: 100%;
@@ -88,12 +162,23 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        display: contents;
+    }
 }
 
 .page-footer__bottom-link {
     font-size: 1.4rem;
     line-height: 2.3rem;
     margin-right: 5rem;
+    @include breakpoint(mobile) {
+
+        margin-bottom: .7rem;
+    }
 
     .no-touch &:hover {
         text-decoration: underline;
@@ -108,17 +193,21 @@
     color: #d1d1d3;
     flex-shrink: 0;
 
+    @include breakpoint(mobile) {
+        order: 10;
+        justify-content: flex-end;
+    }
+
     &:link,
     &:visited {
         color: #d1d1d3;
     }
 }
 
-
 .page-footer__made-by-image {
     width: 8.5rem;
     height: auto;
     margin-left: 1.2rem;
     flex-shrink: 0;
-   margin-top: 0.8rem;
+    margin-top: 0.8rem;
 }

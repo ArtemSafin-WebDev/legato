@@ -17,11 +17,17 @@ import fullscreenGallery from './fullscreenGallery';
 import anchorLinks from './anchorLinks';
 import benefits from './benefits';
 import calculator from './calculator';
+import svgRadius from './svgRadius';
+import menu from './menu';
+import specialPromoSlider from './specialPromoSlider';
+import showAll from './showAll';
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     setScrollbarWidth();
+    svgRadius();
     validation();
     customSelects();
     phoneMask();
@@ -39,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     benefits();
     calculator();
+    menu();
+    specialPromoSlider();
+    showAll();
 });
 
 window.addEventListener('load', function() {

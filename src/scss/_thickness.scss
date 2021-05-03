@@ -1,10 +1,19 @@
 .thickness {
     padding: 10rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 4.8rem 0;
+    }
 }
 
 .thickness__heading {
     max-width: 73rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin-bottom: 3rem;
+    }
 }
 
 .thickness__list {
@@ -12,6 +21,15 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-column-gap: 8rem;
     grid-row-gap: 4rem;
+
+    @include breakpoint(small-tablet) {
+        grid-column-gap: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 4.5rem;
+    }
 }
 
 .thickness__list-item {
@@ -32,6 +50,11 @@
     object-fit: contain;
     object-position: left center;
     margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        height: 10rem;
+        margin-bottom: 1.8rem;
+    }
 }
 
 .thickness__card-title {
@@ -40,6 +63,13 @@
     line-height: 120%;
     font-family: var(--nunito);
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 1.6rem;
+    }
 }
 
 .thickness__card-text {
@@ -47,11 +77,19 @@
     line-height: 3.6rem;
     margin-bottom: 6rem;
     color: #7a7a7a;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
 }
 
 .thickness__card-price {
     margin-top: auto;
-
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 }
 
 .thickness__card-price-title {
@@ -59,6 +97,12 @@
     font-size: 2.8rem;
     font-family: var(--nunito);
     line-height: 130%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 130%;
+        margin-bottom: 0.3rem;
+    }
 }
 
 .thickness__card-price-amount {
@@ -67,4 +111,9 @@
     line-height: 130%;
     color: var(--primary-color);
     font-family: var(--nunito);
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 130%;
+    }
 }

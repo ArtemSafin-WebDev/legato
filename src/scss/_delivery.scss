@@ -5,30 +5,57 @@
     background-repeat: no-repeat;
     background-size: auto 45.7rem;
     background-position: left bottom;
+
+    @include breakpoint(mobile) {
+        padding: 4.8rem 0;
+        background-image: none;
+    }
 }
 
 .delivery__row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 4rem;
+    }
 }
 
 .delivery__heading {
     margin-bottom: 3.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.6rem;
+    }
 }
 
 .delivery__text {
     font-size: 2.4rem;
     line-height: 3.6rem;
     padding-bottom: 45.7rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding-bottom: 0;
+    }
 }
 
 .delivery__features-list {
     margin-bottom: 7.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3.4rem;
+    }
 }
 
 .delivery__features-list-item {
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -40,23 +67,48 @@
     line-height: 120%;
     font-family: var(--nunito);
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 120%;
+        margin-bottom: 1.6rem;
+    }
 }
 
 .delivery__features-text {
     font-size: 2.2rem;
     line-height: 3.6rem;
     color: #7a7a7a;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 }
 
 .delivery__options-list {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        align-items: initial;
+        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 4rem;
+        grid-row-gap: 2rem;
+    }
 }
 
 .delivery__options-list-item {
     margin-right: 9rem;
     margin-top: 3rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -68,6 +120,12 @@
     object-fit: contain;
     object-position: left center;
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        width: 11.4rem;
+        height: 9.3rem;
+        margin-bottom: 2.2rem;
+    }
 }
 
 .delivery__options-price {
@@ -75,6 +133,12 @@
     font-weight: bold;
     font-size: 2.2rem;
     line-height: 130%;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 130%;
+    }
 
     strong {
         font-weight: 700;

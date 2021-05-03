@@ -11,14 +11,20 @@ export default function reviewsSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             watchOverflow: true,
-            spaceBetween: 28,
-            centeredSlides: true,
+            spaceBetween: 20,
+            centeredSlides: false,
             loop: true,
             loopedSlides: 4,
             pagination: {
                 el: element.querySelector('.reviews__slider-pagination'),
                 type: 'bullets',
                 clickable: true
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 28,
+                    centeredSlides: true
+                }
             }
         });
     });

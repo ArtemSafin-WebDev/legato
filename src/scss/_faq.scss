@@ -1,6 +1,10 @@
 .faq {
     padding: 9rem 0;
     background: #f8f8f8;
+
+    @include breakpoint(mobile) {
+        padding: 4.8rem 0;
+    }
 }
 
 .faq__heading {
@@ -10,33 +14,69 @@
     line-height: 5.4rem;
     text-align: center;
     font-family: var(--nunito);
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .faq__row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2.8rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: initial;
+    }
+}
+
+.faq__col {
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .faq__questions-list {
-   
+    @include breakpoint(mobile) {
+    }
+}
+
+ .faq:not(.show-all) .faq__col:last-child .faq__questions-list {
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .faq__questions-list-item {
     break-inside: avoid;
     margin-bottom: 3rem;
 
-    &:last-child {
-        margin-bottom: 0;
+    @include breakpointMF(small-tablet) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.6rem;
     }
 }
 
 .faq__questions-accordion {
     background: #ffffff;
-    box-shadow: 0px 4.91299px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.06);
     border-radius: 2.5rem;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        border-radius: 2rem;
+    }
 }
 
 .faq__questions-accordion-btn {
@@ -49,6 +89,14 @@
     justify-content: space-between;
     cursor: pointer;
     padding: 2.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem 1.6rem;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 120%;
+        align-items: flex-start;
+    }
 }
 
 .faq__questions-accordion-btn-cross {
@@ -64,7 +112,13 @@
     background-color: var(--primary-color);
     flex-shrink: 0;
     margin-left: 2rem;
-    transition: transform .3s;
+    transition: transform 0.3s;
+
+    @include breakpoint(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-top: -0.15rem;
+    }
     .faq__questions-accordion.active & {
         transform: rotate(45deg);
     }
@@ -73,6 +127,11 @@
         height: 1.6rem;
         fill: white;
         display: block;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+        }
     }
 }
 
@@ -83,9 +142,18 @@
 
 .faq__questions-accordion-content-inner {
     padding: 2.5rem;
-    
+
     font-size: 2.4rem;
     line-height: 140%;
     padding-right: 3rem;
     max-width: 66rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem;
+        padding-bottom: 2.4rem;
+        padding-top: 0;
+        max-width: none;
+        font-size: 1.4rem;
+        line-height: 140%;
+    }
 }

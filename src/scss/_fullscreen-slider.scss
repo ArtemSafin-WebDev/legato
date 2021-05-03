@@ -2,6 +2,8 @@
     color: white;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+  
 }
 
 .fullscreen-gallery__content {
@@ -9,6 +11,12 @@
         opacity: 0;
         visibility: hidden;
         transform: scale(0.9);
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            opacity: 1;
+            visibility: inherit;
+            transform: none;
+        }
     }
 }
 
@@ -21,9 +29,26 @@
     z-index: -1;
     mask-image: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 1) 5rem);
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        mask-image: none;
+    }
+
+    @include breakpoint(mobile) {
+        mask-image: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 1) 7rem);
+    }
+
     .intro-animation & {
         opacity: 0;
         visibility: hidden;
+        @media (min-width: 768px) and (max-width: 1024px) {
+            opacity: 1;
+            visibility: inherit;
+        }
+
+        @include breakpoint(mobile) {
+            opacity: 1;
+            visibility: inherit;
+        }
     }
 
     .swiper-container {
@@ -36,10 +61,11 @@
     }
 
     .swiper-slide {
-        height: 100%;
+        height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
     }
 }
 
@@ -76,19 +102,41 @@
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        min-height: 100rem;
+    }
+
     @include breakpoint(small-tablet) {
-        padding: 20rem 0;
+        padding: 10rem 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
     }
 }
 
 .fullscreen-gallery__heading {
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .fullscreen-gallery__categories {
     display: flex;
     align-items: center;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        display: grid;
+        align-items: initial;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 0.5rem;
+        grid-row-gap: 2rem;
+    }
 }
 
 .fullscreen-gallery__categories-link {
@@ -103,9 +151,20 @@
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.9rem;
-    border-radius: 3rem;
+
     margin-right: 1rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 1.7rem 1.2rem;
+        margin: 0;
+        flex-grow: 1;
+
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -134,7 +193,6 @@
     }
 }
 
-
 .fullscreen-gallery__categories-link-bg {
     position: absolute;
     left: 0;
@@ -142,7 +200,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     z-index: -1;
 
     rect {
@@ -150,8 +208,6 @@
         height: calc(100% - 2px);
     }
 }
-
-
 
 .fullscreen-gallery__categories-link-icon {
     width: 100%;
@@ -164,6 +220,10 @@
         transition: fill 0.2s;
         display: block;
         width: 100%;
+
+        @include breakpoint(mobile) {
+            height: 4rem;
+        }
     }
 }
 
@@ -189,12 +249,24 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 3.6rem;
+        margin-bottom: 0;
+    }
 }
 
 .fullscreen-gallery__inner-slider-card-text {
     font-size: 2.4rem;
     line-height: 4.3rem;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
 }
 
 .fullscreen-gallery__inner-slider-card-link {
@@ -214,9 +286,9 @@
     width: 7.4rem;
     height: 7.4rem;
     position: relative;
-  
+
     transition: border-color 0.2s, background-color 0.2s, color 0.2s, opacity 0.2s;
-    
+
     margin-right: 2rem;
     &:last-child {
         margin-right: 0;
@@ -236,8 +308,6 @@
         pointer-events: none;
         opacity: 0;
     }
-
-   
 }
 
 .fullscreen-gallery__arrow-bg {
@@ -248,8 +318,7 @@
     height: 100%;
     z-index: -1;
     opacity: 0;
-    transition: opacity .2s;
-
+    transition: opacity 0.2s;
 
     .fullscreen-gallery__arrow.autoplaying & {
         opacity: 1;

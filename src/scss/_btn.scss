@@ -9,7 +9,7 @@
     font-family: var(--nunito);
     background-color: var(--primary-color);
     color: white;
-    transition: background-color .2s, color .2s, border-color .2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     padding: 2.3rem 4rem;
     flex-shrink: 0;
     white-space: nowrap;
@@ -17,7 +17,14 @@
     border-radius: 2rem;
     border: 1px solid var(--primary-color);
 
-   
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        padding: 1.6rem 2.8rem;
+        border-radius: 1.4rem;
+    }
+
     &:link,
     &:visited {
         color: white;

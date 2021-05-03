@@ -1,10 +1,8 @@
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function faqAccordions() {
-    
-
     const SPEED = 0.5;
 
     const openAccordion = element => {
@@ -33,14 +31,13 @@ export default function faqAccordions() {
 
             elements.forEach(otherElement => {
                 if (otherElement !== element) {
-
                     if (otherElement.classList.contains('active')) {
                         const content = otherElement.querySelector('.faq__questions-accordion-content');
                         closeAccordion(content);
                         otherElement.classList.remove('active');
                     }
-                } 
-            })
+                }
+            });
 
             if (element.classList.contains('active')) {
                 closeAccordion(content);

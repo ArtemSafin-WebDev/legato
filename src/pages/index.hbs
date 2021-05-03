@@ -11,6 +11,7 @@
     <div class="container">
         <div class="intro__content">
             <div class="intro__text-content">
+                <img src="img/logo-white.svg" alt="" class="intro__mobile-logo">
                 <h2 class="intro__heading">
                     Мягкое стекло на стол — силиконовая скатерть «‎Гибкое стекло»
                 </h2>
@@ -22,7 +23,10 @@
                         <svg width="14" height="14" aria-hidden="true" class="icon-question">
                             <use xlink:href="#question"></use>
                         </svg>
-                        Получить консультацию
+                        <div class="intro__get-consultation-text">
+                            Получить консультацию
+                        </div>
+
                     </a>
                 </div>
             </div>
@@ -924,7 +928,7 @@
         <h2 class="section-heading special__heading">
             Специальное предложение
         </h2>
-        <div class="special__promo-slider">
+        <div class="special__promo-slider js-special-promo-slider">
 
             <div class="swiper-container">
 
@@ -1014,6 +1018,17 @@
                     </div>
                 </div>
             </div>
+
+            <button class="surface-types__slider-mobile-arrow surface-types__slider-mobile-arrow--prev">
+                <svg width="14" height="14" aria-hidden="true" class="icon-mobile-slider-arrow-left">
+                    <use xlink:href="#mobile-slider-arrow-left"></use>
+                </svg>
+            </button>
+            <button class="surface-types__slider-mobile-arrow surface-types__slider-mobile-arrow--next">
+                <svg width="14" height="14" aria-hidden="true" class="icon-mobile-slider-arrow-right">
+                    <use xlink:href="#mobile-slider-arrow-right"></use>
+                </svg>
+            </button>
             <div class="surface-types__slider-controls">
                 <div class="surface-types__slider-nav">
                     <a href="#" class="surface-types__slider-nav-link">
@@ -1115,7 +1130,12 @@
                             <use xlink:href="#arrow-thin-right"></use>
                         </svg>
                     </button>
+
+
+
                 </div>
+
+
             </div>
         </div>
         <div class="surface-types__row">
@@ -1269,7 +1289,7 @@
                 </div>
             </li>
         </ul>
-        <div class="why-us__difference">
+        <div class="why-us__difference js-show-all-container">
             <h3 class="why-us__difference-heading">
                 В отличие от китайских покрытий наша прозрачная пленка на стол имеет плотную структуру (сложно прорезать
                 насквозь), нет едкого запаха, не слипается!
@@ -1316,6 +1336,9 @@
                     Легко подрезается после усадки.
                 </li>
             </ul>
+            <a href="#" class="why-us__show-more-btn js-show-all">
+                Показать еще
+            </a>
         </div>
     </div>
 </section>
@@ -1323,8 +1346,9 @@
 <section class="how-to-choose">
     <div class="container">
         <div class="how-to-choose__row">
+            <img data-src="img/table.png" alt="" class="how-to-choose__card-table lazyload">
             <div class="how-to-choose__card">
-                <img data-src="img/table.png" alt="" class="how-to-choose__card-table lazyload">
+
                 <h2 class="section-heading how-to-choose__card-heading">
                     Прозрачная скатерть на стол — есть вопросы?
                 </h2>
@@ -1339,7 +1363,14 @@
                         Рассчитать стоимость
                     </a>
                     <a href="#" class="how-to-choose__card-btn how-to-choose__card-write-btn">
-                        Написать нам
+                        <div class="how-to-choose__card-write-btn-text">
+                            Написать нам
+                        </div>
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-question">
+                            <use xlink:href="#question"></use>
+                        </svg>
+
                     </a>
                 </div>
             </div>
@@ -1481,12 +1512,15 @@
                                 id="diameter" data-parsley-validate-if-empty data-parsley-required-if-round>
                         </div>
 
-                        <div class="calculator__form-field calculator__form-field--fullwidth" id="thickness-error-container">
+                        <div class="calculator__form-field calculator__form-field--fullwidth"
+                            id="thickness-error-container">
                             <label for="thickness" class="calculator__form-field-label">
                                 Толщина
                             </label>
                             <div class="calculator__form-select">
-                                <select name="form" class="js-custom-select" id="thickness-select" required data-parsley-errors-container="#thickness-error-container" data-parsley-class-handler="#thickness-error-container">
+                                <select name="form" class="js-custom-select" id="thickness-select" required
+                                    data-parsley-errors-container="#thickness-error-container"
+                                    data-parsley-class-handler="#thickness-error-container">
                                     <option value="" placeholder>
                                         Толщина
                                     </option>
@@ -1503,14 +1537,14 @@
                             </div>
                         </div>
 
-                        <div class="calculator__form-field">
+                        <div class="calculator__form-field calculator__form-field--fullwidth-on-mobile">
                             <label for="yourname" class="calculator__form-field-label">
                                 Имя
                             </label>
                             <input type="text" class="calculator__form-input js-numeric-input" placeholder="Имя"
                                 name="yourname" required>
                         </div>
-                        <div class="calculator__form-field">
+                        <div class="calculator__form-field calculator__form-field--fullwidth-on-mobile">
                             <label for="yourphone" class="calculator__form-field-label">
                                 Телефон
                             </label>
@@ -1712,7 +1746,7 @@
     </div>
 </section>
 
-<section class="faq">
+<section class="faq js-show-all-container">
     <div class="container">
         <h2 class="faq__heading">
             Наш эксперт отвечает на самые главные вопросы
@@ -1957,7 +1991,13 @@
                     </li>
                 </ul>
             </div>
+
+
+
         </div>
+        <a href="#" class="why-us__show-more-btn js-show-all">
+            Показать еще
+        </a>
 
     </div>
 </section>
@@ -2058,8 +2098,9 @@
 <section class="how-to-choose">
     <div class="container">
         <div class="how-to-choose__row">
+            <img data-src="img/table.png" alt="" class="how-to-choose__card-table lazyload">
             <div class="how-to-choose__card">
-                <img data-src="img/table.png" alt="" class="how-to-choose__card-table lazyload">
+
                 <h2 class="section-heading how-to-choose__card-heading">
                     Не знаете как выбрать гибкое стекло?
                 </h2>
@@ -2069,11 +2110,11 @@
                     </p>
                 </div>
                 <form action="/" method="POST" class="how-to-choose__card-form" data-need-validation="">
-                    <div class="how-to-choose__card-form-field">
+                    <div class="how-to-choose__card-form-field how-to-choose__card-form-field--fullwidth-on-mobile">
                         <input type="text" name="name" class="how-to-choose__card-form-input" required
                             placeholder="Имя">
                     </div>
-                    <div class="how-to-choose__card-form-field">
+                    <div class="how-to-choose__card-form-field how-to-choose__card-form-field--fullwidth-on-mobile">
                         <input type="tel" name="phone" class="how-to-choose__card-form-input js-phone-input" required
                             data-parsley-phone placeholder="Телефон">
                     </div>

@@ -21,7 +21,7 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(to top, #654134 3.5%, rgba(164, 121, 89, 0) 51.9%);
-        opacity: .75;
+        opacity: 0.75;
     }
 }
 
@@ -42,6 +42,11 @@
 
 .intro__text-content {
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 6rem;
+    }
 }
 
 .intro__content {
@@ -50,7 +55,29 @@
     flex-direction: column;
     padding: 10rem 0;
 
-   
+    @include breakpoint(tablet) {
+        min-height: 100rem;
+    }
+
+    @include breakpoint(mobile) {
+        min-height: 100vh;
+        padding-top: 13.5rem;
+    }
+}
+
+.intro__mobile-logo {
+    display: none;
+    @include breakpoint(tablet) {
+        display: block;
+        height: auto;
+        width: 24rem;
+        margin-bottom: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 12rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .intro__heading {
@@ -60,6 +87,13 @@
     margin-bottom: 5.5rem;
     font-family: var(--nunito);
     max-width: 70rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+        margin-bottom: 2.4rem;
+        max-width: none;
+    }
 }
 
 .intro__buttons {
@@ -69,6 +103,10 @@
 
 .intro__calculate-btn {
     margin-right: 2.4rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 1.6rem;
+    }
 }
 
 .intro__get-consultation {
@@ -81,22 +119,40 @@
     font-size: 2rem;
     line-height: 2.5rem;
     font-family: var(--nunito);
-    padding: 1.9rem 2.2rem;
+    padding: 2.1rem 2.2rem;
     color: var(--text-color);
-    transition: color .2s, background-color .2s;
+    transition: color 0.2s, background-color 0.2s;
+
+    @include breakpoint(mobile) {
+        width: 4.8rem;
+        height: 4.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        padding: 0;
+        border-radius: 1.5rem;
+    }
     &:link,
     &:visited {
         color: var(--text-color);
     }
 
-    
     svg {
         width: 3.2rem;
         height: 3.2rem;
         flex-shrink: 0;
         fill: var(--primary-color);
         margin-right: 1.3rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
+
+        @include breakpoint(mobile) {
+            width: 2rem;
+            height: 2rem;
+            margin: 0;
+        }
     }
 
     .no-touch &:hover,
@@ -110,15 +166,35 @@
     }
 }
 
+.intro__get-consultation-text {
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
 .intro__features-list {
     margin-top: auto;
     display: flex;
     align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        align-items: initial;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 4rem;
+        grid-row-gap: 3.2rem;
+    }
 }
 
 .intro__features-list-item {
     flex-basis: 18rem;
     margin-right: 6.5rem;
+
+    @include breakpoint(mobile) {
+        flex-basis: auto;
+        margin: 0;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -132,6 +208,11 @@
     object-position: left center;
     flex-shrink: 0;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        height: 3.6rem;
+        margin-bottom: 1.2rem;
+    }
 }
 
 .intro__features-card-text {
@@ -141,4 +222,8 @@
 
     font-weight: bold;
 
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
 }

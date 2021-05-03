@@ -2,13 +2,20 @@
     padding-top: 12rem;
     padding-bottom: 10rem;
 
+    @include breakpoint(mobile) {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
 }
 
 .benefits__intro {
-  
     margin-bottom: 8rem;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -21,20 +28,37 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
 .benefits__intro-content {
     max-width: 90rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
 }
 
 .benefits__heading {
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
 }
 
 .benefits__text {
     font-size: 2.4rem;
     line-height: 3.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
 }
 
 .benefits__list {
@@ -42,6 +66,15 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-column-gap: 8rem;
     grid-row-gap: 6rem;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include breakpoint(mobile) {
+        grid-column-gap: 2rem;
+        grid-row-gap: 1.5rem;
+    }
 }
 
 .benefits__list-item {
@@ -61,12 +94,18 @@
     color: #231f20;
     transition: z-index 0.6s step-end;
 
-    .benefits__list-item:nth-child(3n + 1) & {
-        z-index: 2;
+    @include breakpointMF(laptop) {
+        .benefits__list-item:nth-child(3n + 1) & {
+            z-index: 2;
 
-        &.active {
-            z-index: 100;
+            &.active {
+                z-index: 100;
+            }
         }
+    }
+
+    @include breakpoint(mobile) {
+        height: 22.5rem;
     }
 
     &.active {
@@ -77,7 +116,7 @@
 
 .benefits__card-content {
     padding: 4rem;
-    
+
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -99,13 +138,30 @@
         transition: flex-grow 0.6s;
     }
 
-    .benefits__list-item:nth-child(3n) & {
-        left: auto;
-        right: 0;
+    @include breakpointMF(laptop) {
+        .benefits__list-item:nth-child(3n) & {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        .benefits__list-item:nth-child(2n) & {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem;
     }
 
     .benefits__card.active & {
         width: calc(200% + 8rem);
+
+        @include breakpoint(mobile) {
+            width: calc(200% + 2rem);
+        }
 
         &::before {
             flex-grow: 0;
@@ -127,11 +183,23 @@
     justify-content: center;
     transition: transform 0.2s, background-color 0.2s;
     cursor: pointer;
+
+    @include breakpoint(mobile) {
+        width: 3.2rem;
+        height: 3.2rem;
+        top: 1.2rem;
+        right: 1.2rem;
+    }
     svg {
         width: 2.2rem;
         height: 2.2rem;
         fill: white;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 
     .no-touch &:hover {
@@ -215,6 +283,12 @@
     transition: opacity 0.3s, visibility 0s linear 0.3s, transform 0.3s;
     padding: 4rem;
     padding-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        line-height: 16px;
+    }
     .benefits__card.active & {
         opacity: 1;
         visibility: inherit;
@@ -228,16 +302,31 @@
     font-size: 2.8rem;
     line-height: 120%;
     font-family: var(--nunito);
-    padding-right: 7rem;
+  
     padding-top: 1.4rem;
+
+   
+
+    
     .benefits__card.active & {
+        padding-right: 7rem;
         animation-name: fade-title-in-out;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
     }
-}
 
+    @include breakpoint(mobile) {
+        padding-right: 0;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        line-height: 120%;
+
+        .benefits__card.active & {
+            padding-right: 4rem;
+        }
+    }
+}
 
 @keyframes fade-title-in-out {
     0% {
@@ -247,7 +336,6 @@
     20% {
         opacity: 0;
     }
-
 
     80% {
         opacity: 0;

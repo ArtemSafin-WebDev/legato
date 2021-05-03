@@ -3,7 +3,9 @@ import { Swiper, Navigation } from 'swiper';
 import { gsap } from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
-gsap.registerPlugin(DrawSVGPlugin);
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin);
 
 Swiper.use([Navigation]);
 
@@ -13,6 +15,7 @@ export default function surfaceTypesSlider() {
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
         const links = Array.from(element.querySelectorAll('.surface-types__slider-nav-link'));
+        const linksContainer = element.querySelector('.surface-types__slider-nav');
         const prevEl = element.querySelector('.surface-types__slider-arrow--prev');
         const nextEl = element.querySelector('.surface-types__slider-arrow--next');
         const AUTOPLAY_DURATION = 10;
@@ -30,8 +33,8 @@ export default function surfaceTypesSlider() {
             init: false,
             loop: true,
             navigation: {
-                nextEl,
-                prevEl
+                nextEl: window.matchMedia('(max-width: 640px)').matches ? element.querySelector('.surface-types__slider-mobile-arrow--next') : nextEl,
+                prevEl: window.matchMedia('(max-width: 640px)').matches ? element.querySelector('.surface-types__slider-mobile-arrow--prev') : prevEl
             },
             on: {
                 init: swiper => {
@@ -74,7 +77,16 @@ export default function surfaceTypesSlider() {
             const currentLink = links[startIndex];
             const currentLinkProgress = currentLink.querySelector('.surface-types__slider-nav-link-progress');
 
-         
+            if (window.matchMedia('(max-width: 640px)').matches) {
+                gsap.to(linksContainer, {
+                    duration: 2,
+                    ease: 'power2.out',
+                    scrollTo: {
+                        x: currentLink.offsetLeft,
+                        offsetX: parseFloat(window.getComputedStyle(document.querySelector('.container'), null).getPropertyValue('padding-left'))
+                    }
+                });
+            }
 
             const tl = gsap.timeline({
                 onComplete: () => {

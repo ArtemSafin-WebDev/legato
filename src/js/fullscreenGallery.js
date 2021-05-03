@@ -3,7 +3,10 @@ import { Swiper, Navigation, Controller, EffectFade } from 'swiper';
 import { gsap } from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
-gsap.registerPlugin(DrawSVGPlugin);
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger);
 
 Swiper.use([Navigation, Controller, EffectFade]);
 
@@ -115,6 +118,11 @@ export default function fullscreenGallery() {
             allowTouchMove: true,
             fadeEffect: {
                 crossFade: true
+            },
+            on: {
+                slideChange: () => {
+                    ScrollTrigger.refresh();
+                }
             }
         });
 

@@ -15,6 +15,14 @@
   
     --nunito: 'Nunito', sans-serif;
     --roboto: 'Roboto', sans-serif;
+
+    @include breakpoint(tablet) {
+        --content-padding: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        --content-padding: 1.8rem;
+    }
 }
 
 html {
@@ -35,7 +43,7 @@ html {
         font-size: 7px;
     }
     @include breakpoint(tablet) {
-        font-size: 6px;
+        font-size: 8px;
     }
     @include breakpoint(small-tablet) {
         font-size: 6px;

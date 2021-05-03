@@ -2,7 +2,11 @@
     padding: 10rem 0;
     position: relative;
     z-index: 100;
-    background-color: #F6F6F7;
+    background-color: #f6f6f7;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
     .intro-animation & {
         background: transparent;
     }
@@ -16,6 +20,12 @@
     overflow: hidden;
     transform: translateZ(0);
     backface-visibility: hidden;
+
+    @include breakpoint(mobile) {
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .photo-comparison__card-col {
@@ -27,16 +37,33 @@
 
 .photo-comparison__card-content {
     padding: 7.2rem;
+
+    @include breakpoint(tablet) {
+        padding: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 }
 
 .photo-comparison__heading {
     margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+    }
 }
 
 .photo-comparison__text {
     font-size: 2.4rem;
     line-height: 3.6rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .photo-comparison__link {
@@ -51,6 +78,18 @@
     height: 100%;
     background-color: var(--primary-color);
     user-select: none;
+    touch-action: pan-x;
+
+    @include breakpoint(mobile) {
+        position: relative;
+        height: auto;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
     .cd-image-container {
         position: absolute;
         left: 0;
@@ -81,9 +120,7 @@
         transform: translateZ(0);
         backface-visibility: hidden;
         clip-path: polygon(0 0, calc(var(--percentage-shown) * 100%) 0, calc(var(--percentage-shown) * 100%) 100%, 0 100%);
-       
     }
-
 
     .cd-handle-wrapper {
         position: absolute;
@@ -92,13 +129,11 @@
         width: 100%;
         height: 100%;
 
-
         // background-color: red;
         // opacity: 0.6;
         z-index: 10;
         user-select: none;
         width: calc(var(--percentage-shown) * 100%);
-       
     }
 
     .cd-handle {
@@ -115,6 +150,10 @@
             height: 2rem;
             fill: white;
             margin-right: 5rem;
+
+            @include breakpoint(mobile) {
+                margin-right: 3rem;
+            }
             &:last-child {
                 margin-right: 0;
             }

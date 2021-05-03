@@ -14,18 +14,22 @@ export default function anchorLinks() {
 
                 const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
                 if (elementToScroll) {
-                    if (window.stickyNav) {
-                        gsap.to(window, {
-                            duration: 2,
-                            ease: 'power2.out',
-                            scrollTo: {
-                                y: elementToScroll,
-                                offsetY: document.querySelector('.page-header').offsetHeight
-                            }
-                        });
+
+                    if (window.menuOpen) {
+                        console.log('menu open')
+                        window.closeMenu();
                     } else {
-                        gsap.to(window, { duration: 2, ease: 'power2.out', scrollTo: elementToScroll });
+                        console.log('menu not open')
                     }
+                    gsap.to(window, {
+                        duration: 4,
+                        ease: 'power2.out',
+                        scrollTo: {
+                            y: elementToScroll,
+                            autoKill: true,
+                            offsetY: document.querySelector('.page-header').offsetHeight
+                        }
+                    });
                 }
             }
         }

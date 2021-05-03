@@ -12,6 +12,8 @@ export default function introAnimation() {
 
     if (!intro) return;
 
+    if (window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches) return;
+
     document.body.classList.add('intro-animation')
     const introContent = intro.querySelector('.intro__content');
     const photoComparison = document.querySelector('.photo-comparison');

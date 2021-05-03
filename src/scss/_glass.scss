@@ -1,6 +1,10 @@
 .glass {
     padding: 10rem 0;
-    background: #F8F8F8;
+    background: #f8f8f8;
+
+    @include breakpoint(mobile) {
+        padding: 3.2rem 0;
+    }
 }
 
 .glass__card {
@@ -11,10 +15,21 @@
 .glass__card-top-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        padding: 3.2rem 1.6rem;
+    }
 }
 
 .glass__card-col {
     padding: 7.2rem;
+
+    @include breakpoint(mobile) {
+        padding: 3.2rem 1.6rem;
+        display: contents;
+    }
 }
 
 .glass__card-heading {
@@ -24,11 +39,20 @@
 .glass__card-text {
     font-size: 2.2rem;
     line-height: 3.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
 }
 
 .glass__card-bottom-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 .glass__card-inner {
@@ -43,21 +67,41 @@
     flex-direction: column;
     padding: 7.2rem;
 
+  
 
-    &:nth-child(odd) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+    @include breakpointMF(laptop) {
+        &:nth-child(odd) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:nth-child(even) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
     }
-    &:nth-child(even) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+
+    @include breakpoint(mobile) {
+        min-height: 40rem;
+        padding: 3.2rem 1.6rem;
+
+        &:nth-child(odd) {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        &:nth-child(even) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
     }
+
+   
 
     .no-touch &:hover {
         .glass__card-link {
             opacity: 1;
             visibility: visible;
-            transition: all .2s;
+            transition: all 0.2s;
         }
     }
 }
@@ -110,6 +154,11 @@
     margin-left: 5rem;
     object-fit: contain;
     object-position: center;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+    }
 }
 
 .glass__card-heading-block-type {
@@ -118,6 +167,11 @@
     color: rgba(white, 0.6);
     margin-bottom: 1.6rem;
     max-width: 40rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 125%;
+    }
 }
 
 .glass__card-heading-block-name {
@@ -125,17 +179,27 @@
     font-size: 4.6rem;
     line-height: 125%;
     font-family: var(--nunito);
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 125%;
+    }
 }
 
 .glass__card-description {
     font-size: 2.2rem;
     line-height: 3.4rem;
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 }
 
 .glass__card-link {
     opacity: 0;
     visibility: hidden;
-    transition: opacity .2s, visibility 0s linear .2s, background-color .2s, color .2s;
+    transition: opacity 0.2s, visibility 0s linear 0.2s, background-color 0.2s, color 0.2s;
     align-self: flex-start;
 }
