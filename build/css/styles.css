@@ -1701,7 +1701,8 @@ select:-webkit-autofill:focus {
   text-align: right;
   grid-column-gap: 2.2rem;
   grid-row-gap: 0.5rem;
-  margin-left: auto; }
+  margin-left: auto;
+  align-self: center; }
   @media only screen and (max-width: 640px) {
     .page-header__contacts-block {
       grid-template-areas: 'phone-link whatsapp-link';
