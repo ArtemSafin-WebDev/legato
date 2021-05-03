@@ -1,0 +1,80 @@
+<div class="modal js-modal" id="callback">
+
+    <div class="modal__inner">
+        <button class="modal__close-btn js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+
+        </button>
+        <h2 class="modal__heading">
+            Обратная связь
+        </h2>
+        <div class="modal__text">
+            <p>
+                Заполните форму и мы свяжемся с вами в ближайшее время.
+            </p>
+        </div>
+        <form action="/" method="POST" class="modal__form" data-need-validation>
+            <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                <input type="name" class="modal__form-input" placeholder="Имя" required>
+            </div>
+            <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required
+                    data-parsley-phone>
+            </div>
+            <div class="modal__form-field modal__form-field--fullwidth">
+                <textarea name="comment" class="modal__form-input" placeholder="Комментарий"></textarea>
+            </div>
+            <div class="modal__form-field">
+                <div class="modal__form-field-policy">
+                    <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+            </div>
+            <div class="modal__form-field">
+                <button class="btn modal__form-submit" type="submit">
+                    Заказать звонок
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="callback-simple">
+
+    <div class="modal__inner">
+        <button class="modal__close-btn js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+
+        </button>
+        <h2 class="modal__heading">
+            Обратная связь
+        </h2>
+        <div class="modal__text">
+            <p>
+                Заполните форму и мы свяжемся с вами в ближайшее время.
+            </p>
+        </div>
+        <form action="/" method="POST" class="modal__form" data-need-validation>
+            <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                <input type="name" class="modal__form-input" placeholder="Имя" required>
+            </div>
+            <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required
+                    data-parsley-phone>
+            </div>
+          
+            <div class="modal__form-field">
+                <div class="modal__form-field-policy">
+                    <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                </div>
+            </div>
+            <div class="modal__form-field">
+                <button class="btn modal__form-submit" type="submit">
+                    Заказать звонок
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

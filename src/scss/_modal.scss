@@ -1,0 +1,225 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(#231f20, 0.8);
+    z-index: 1000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem var(--content-padding);
+    transition: opacity .4s, visibility 0s linear .4s;
+    opacity: 0;
+    visibility: hidden;
+    @include noScrollbar();
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s, visibility .4s;
+    }
+
+    body:not(.loaded) & {
+        display: none;
+    }
+}
+
+.modal__close-btn {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    transition: background-color .2s;
+   
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: var(--primary-color);
+        transform: rotate(45deg);
+        transition: fill .2s;
+        @include breakpoint(small-tablet) {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        svg {
+            fill: white;
+        }
+    }
+
+
+    @include breakpoint(small-tablet) {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        right: 1.5rem;
+        top: 1.5rem;
+        background-color: var(--primary-color);
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.modal__inner {
+    width: 100%;
+    margin: auto;
+    max-width: 72.6rem;
+    background: #ffffff;
+    box-shadow: 0px 0.4rem 4rem rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
+    padding: 6rem;
+    color: var(--text-color);
+
+    @include breakpoint(small-tablet) {
+        padding: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        border-radius: 2rem;
+        padding: 3.2rem 1.6rem;
+        position: relative;
+    }
+}
+
+.modal__heading {
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 5.4rem;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(tablet) {
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 125%;
+        margin-bottom: 2rem;
+    }
+}
+
+.modal__text {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-bottom: 2rem;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+}
+
+.modal__form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.6rem;
+    }
+}
+
+.modal__form-field--fullwidth-on-mobile {
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
+}
+
+.modal__form-field--fullwidth {
+    grid-column: 1 / -1;
+}
+
+.modal__form-input {
+    height: 7.2rem;
+    background: #f7f7f7;
+    border-radius: 2rem;
+    padding: 0 2.4rem;
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: var(--nunito);
+    color: var(--text-color);
+    border: 1px solid #f7f7f7;
+
+    &.parsley-error {
+        border-color: var(--primary-color);
+    }
+    @include placeholder {
+        color: rgba(#231f20, 0.5);
+    }
+
+    @include breakpoint(mobile) {
+        height: 5.6rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        padding: 0 1.6rem;
+        border-radius: 1rem;
+    }
+}
+
+
+textarea.modal__form-input  {
+    resize: none;
+    height: 18rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        height: 12rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.modal__form-field-policy {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+    align-self: center;
+
+    @include breakpoint(mobile) {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    a {
+        color: var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
+        transition: color 0.2s, border-color 0.2s;
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+.modal__form-submit {
+    width: 100%;
+}

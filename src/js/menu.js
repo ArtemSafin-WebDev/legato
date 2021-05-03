@@ -1,4 +1,4 @@
-import { lockScroll, unlockScroll } from "./scrollBlocker";
+import {clearAllBodyScrollLocks as unlockScroll, disableBodyScroll as lockScroll} from 'body-scroll-lock';
 
 export default function menu() {
     const menu = document.querySelector('.page-header__menu');

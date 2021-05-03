@@ -121,7 +121,7 @@
                     <a href="#to-calculator" class="btn intro__calculate-btn">
                         Рассчитать стоимость
                     </a>
-                    <a href="#" class="intro__get-consultation">
+                    <a href="#callback" class="intro__get-consultation js-open-modal">
                         <svg width="14" height="14" aria-hidden="true" class="icon-question">
                             <use xlink:href="#question"></use>
                         </svg>
@@ -902,7 +902,7 @@
                         </div>
                         <img src="img/glass-icon-1.svg" alt="" class="glass__card-heading-block-icon">
                     </div>
-                    <a href="#" class="btn glass__card-link">
+                    <a href="#callback-simple" class="btn glass__card-link js-open-modal">
                         Заказать скатерть
                     </a>
                     <div class="glass__card-description">
@@ -929,7 +929,7 @@
                         </div>
                         <img src="img/glass-icon-2.svg" alt="" class="glass__card-heading-block-icon">
                     </div>
-                    <a href="#" class="btn glass__card-link">
+                    <a href="#callback-simple" class="btn glass__card-link js-open-modal">
                         Заказать скатерть
                     </a>
                     <div class="glass__card-description">
@@ -1070,7 +1070,7 @@
                         </a>
                     </li>
                     <li class="swiper-slide special__promo-list-item">
-                        <a href="#" class="special__get-discount">
+                        <a href="#callback-simple" class="special__get-discount js-open-modal">
                             Получить скидку
                         </a>
                     </li>
@@ -1253,10 +1253,10 @@
                     </p>
                 </div>
                 <div class="surface-types__buttons">
-                    <a href="#" class="btn surface-types__btn">
-                        Заказть звонок консультанта
+                    <a href="#callback-simple" class="btn surface-types__btn js-open-modal">
+                        Заказать звонок консультанта
                     </a>
-                    <a href="#" class="btn btn--hollow surface-types__btn">
+                    <a href="#callback" class="btn btn--hollow surface-types__btn js-open-modal">
                         Оставить отзыв
                     </a>
                 </div>
@@ -1464,7 +1464,7 @@
                     <a href="#to-calculator" class="btn how-to-choose__card-btn">
                         Рассчитать стоимость
                     </a>
-                    <a href="#" class="how-to-choose__card-btn how-to-choose__card-write-btn">
+                    <a href="#callback" class="how-to-choose__card-btn how-to-choose__card-write-btn js-open-modal">
                         <div class="how-to-choose__card-write-btn-text">
                             Написать нам
                         </div>
@@ -1703,7 +1703,7 @@
                         определить размеры стола, чтобы безошибочно заказать скатерть.
                     </p>
                 </div>
-                <a href="#" class="btn advantage__link">
+                <a href="#callback-simple" class="btn advantage__link js-open-modal">
                     Получить инструкцию
                 </a>
             </div>
@@ -2289,7 +2289,86 @@
                     </a>
                 </div>
             </div>
-        </footer>        <style>
+        </footer>        <div class="modal js-modal" id="callback">
+        
+            <div class="modal__inner">
+                <button class="modal__close-btn js-close-modal">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+        
+                </button>
+                <h2 class="modal__heading">
+                    Обратная связь
+                </h2>
+                <div class="modal__text">
+                    <p>
+                        Заполните форму и мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+                <form action="/" method="POST" class="modal__form" data-need-validation>
+                    <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                        <input type="name" class="modal__form-input" placeholder="Имя" required>
+                    </div>
+                    <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                        <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required
+                            data-parsley-phone>
+                    </div>
+                    <div class="modal__form-field modal__form-field--fullwidth">
+                        <textarea name="comment" class="modal__form-input" placeholder="Комментарий"></textarea>
+                    </div>
+                    <div class="modal__form-field">
+                        <div class="modal__form-field-policy">
+                            <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                        </div>
+                    </div>
+                    <div class="modal__form-field">
+                        <button class="btn modal__form-submit" type="submit">
+                            Заказать звонок
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal js-modal" id="callback-simple">
+        
+            <div class="modal__inner">
+                <button class="modal__close-btn js-close-modal">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+        
+                </button>
+                <h2 class="modal__heading">
+                    Обратная связь
+                </h2>
+                <div class="modal__text">
+                    <p>
+                        Заполните форму и мы свяжемся с вами в ближайшее время.
+                    </p>
+                </div>
+                <form action="/" method="POST" class="modal__form" data-need-validation>
+                    <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                        <input type="name" class="modal__form-input" placeholder="Имя" required>
+                    </div>
+                    <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
+                        <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required
+                            data-parsley-phone>
+                    </div>
+                  
+                    <div class="modal__form-field">
+                        <div class="modal__form-field-policy">
+                            <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                        </div>
+                    </div>
+                    <div class="modal__form-field">
+                        <button class="btn modal__form-submit" type="submit">
+                            Заказать звонок
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>        <style>
             .ie-placeholder {
                 z-index: 4000;
                 position: fixed;

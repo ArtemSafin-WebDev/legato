@@ -21,6 +21,7 @@ import svgRadius from './svgRadius';
 import menu from './menu';
 import specialPromoSlider from './specialPromoSlider';
 import showAll from './showAll';
+import modals from './modals';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     specialPromoSlider();
     showAll();
+    modals();
 });
 
 window.addEventListener('load', function() {
