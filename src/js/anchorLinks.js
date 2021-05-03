@@ -14,13 +14,13 @@ export default function anchorLinks() {
 
                 const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
                 if (elementToScroll) {
-
                     if (window.menuOpen) {
-                        console.log('menu open')
                         window.closeMenu();
                     } else {
-                        console.log('menu not open')
+                        console.log('menu not open');
                     }
+                   
+
                     gsap.to(window, {
                         duration: 4,
                         ease: 'power2.out',

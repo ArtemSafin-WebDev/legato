@@ -1,4 +1,6 @@
 import {clearAllBodyScrollLocks as unlockScroll, disableBodyScroll as lockScroll} from 'body-scroll-lock';
+import Hammer from 'hammerjs';
+import { primaryInput } from 'detect-it';
 
 export default function menu() {
     const menu = document.querySelector('.page-header__menu');
@@ -41,4 +43,12 @@ export default function menu() {
             closeMenu();
         }
     })
+
+
+    if (primaryInput === 'touch') {
+        const hammertime = new Hammer(menu);
+        hammertime.on('swipeleft', () => {
+            closeMenu();
+        });
+    }
 }

@@ -22,13 +22,16 @@ import menu from './menu';
 import specialPromoSlider from './specialPromoSlider';
 import showAll from './showAll';
 import modals from './modals';
+import refreshOnImagesLoading from './refreshOnImagesLoading';
 
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     setScrollbarWidth();
+
     svgRadius();
+    refreshOnImagesLoading();
     validation();
     customSelects();
     phoneMask();
