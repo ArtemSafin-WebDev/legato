@@ -176,6 +176,10 @@
     margin-right: 1rem;
     margin-bottom: -1rem;
 
+    &--slingshot {
+        margin-right: -2rem;
+    }
+
     @include breakpoint(mobile) {
         height: 9.2rem;
         margin-right: -2rem;

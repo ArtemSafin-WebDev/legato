@@ -17,6 +17,12 @@
     border-radius: 2rem;
     border: 1px solid var(--primary-color);
 
+    &:not(.btn--hollow) {
+        @include cta-hover();
+    }
+
+ 
+
     @include breakpoint(mobile) {
         font-weight: 600;
         font-size: 1.4rem;

@@ -70,17 +70,25 @@
     flex-direction: column;
     padding: 7.2rem;
 
+
+
+
   
 
     @include breakpointMF(small-tablet) {
         &:nth-child(odd) {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+           
         }
         &:nth-child(even) {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+           
         }
+
+
+
     }
 
     @include breakpoint(mobile) {
@@ -201,8 +209,8 @@
 }
 
 .glass__card-link {
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.2s, visibility 0s linear 0.2s, background-color 0.2s, color 0.2s;
     align-self: flex-start;
 }
