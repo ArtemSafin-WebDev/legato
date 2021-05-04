@@ -52,12 +52,14 @@ export default function photoComparisonSlider() {
             element.addEventListener('pointerup', pointerUp);
 
             element.addEventListener('pointercancel', pointerUp);
+            element.addEventListener('pointerleave', pointerUp);
         } else {
             element.addEventListener('mousedown', pointerDown);
 
             element.addEventListener('mousemove', pointerMove);
 
             element.addEventListener('mouseup', pointerUp);
+            element.addEventListener('mouseleave', pointerUp);
         }
     });
 }
