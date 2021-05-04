@@ -157,10 +157,10 @@
     }
 
     .benefits__card.active & {
-        width: calc(200% + 8rem);
+        width: calc(200% + 8rem + 1px);
 
         @include breakpoint(mobile) {
-            width: calc(200% + 2rem);
+            width: calc(200% + 2rem + 1px);
         }
 
         &::before {

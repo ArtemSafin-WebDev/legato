@@ -1878,7 +1878,7 @@ select:-webkit-autofill:focus {
   font-size: 2rem;
   line-height: 2.5rem;
   font-family: var(--nunito);
-  padding: 2.1rem 2.2rem;
+  padding: 2rem 2.2rem;
   color: var(--text-color);
   -webkit-transition: color 0.2s, background-color 0.2s;
   transition: color 0.2s, background-color 0.2s; }
@@ -2230,18 +2230,14 @@ select:-webkit-autofill:focus {
   margin-top: 0.8rem; }
 
 .how-to-choose {
-  padding: 8rem 0;
   background-color: var(--primary-color);
   color: white;
   position: relative;
   z-index: 1; }
-  @media only screen and (max-width: 640px) {
-    .how-to-choose {
-      padding: 3.2rem 0; } }
 
 .how-to-choose__card-table {
   position: absolute;
-  right: 0;
+  right: -10rem;
   bottom: 0;
   height: 45rem;
   width: auto;
@@ -2259,12 +2255,16 @@ select:-webkit-autofill:focus {
       margin: 0;
       width: 100%;
       z-index: 1;
-      position: static; } }
+      position: static;
+      right: auto;
+      bottom: auto; } }
 
 .how-to-choose__row {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-column-gap: 8rem;
-  display: grid; }
+  display: grid;
+  position: relative;
+  padding: 8rem 0; }
   @media only screen and (max-width: 640px) {
     .how-to-choose__row {
       display: -webkit-box;
@@ -2274,7 +2274,8 @@ select:-webkit-autofill:focus {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      grid-gap: initial; } }
+      grid-gap: initial;
+      padding: 3.2rem 0; } }
 
 .how-to-choose__card {
   background: #ffffff;
@@ -2866,6 +2867,26 @@ select:-webkit-autofill:focus {
     .thickness {
       padding: 4.8rem 0; } }
 
+.thickness__content {
+  position: relative;
+  z-index: 1; }
+  .thickness__content::before {
+    content: '';
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    width: 46rem;
+    height: 53rem;
+    background-image: url("../img/thickness-illustration.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media only screen and (max-width: 640px) {
+      .thickness__content::before {
+        display: none; } }
+
 .thickness__heading {
   max-width: 73rem;
   margin-bottom: 6rem; }
@@ -2881,7 +2902,7 @@ select:-webkit-autofill:focus {
   grid-row-gap: 4rem; }
   @media only screen and (max-width: 768px) {
     .thickness__list {
-      grid-column-gap: 4rem; } }
+      grid-column-gap: 6rem; } }
   @media only screen and (max-width: 640px) {
     .thickness__list {
       grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -3007,6 +3028,9 @@ select:-webkit-autofill:focus {
 
 .glass__card-heading {
   margin-bottom: 0; }
+  @media only screen and (max-width: 640px) {
+    .glass__card-heading {
+      margin-bottom: 2rem; } }
 
 .glass__card-text {
   font-size: 2.2rem;
@@ -3151,8 +3175,6 @@ select:-webkit-autofill:focus {
       line-height: 1.8rem; } }
 
 .glass__card-link {
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: opacity 0.2s, visibility 0s linear 0.2s, background-color 0.2s, color 0.2s;
   transition: opacity 0.2s, visibility 0s linear 0.2s, background-color 0.2s, color 0.2s;
   -ms-flex-item-align: start;
@@ -3778,8 +3800,12 @@ select:-webkit-autofill:focus {
       @media only screen and (max-width: 640px) {
         .table-comparison tbody tr::before {
           display: none; } }
-    .no-touch .table-comparison tbody tr:hover::before {
-      opacity: 1; }
+    .no-touch .table-comparison tbody tr:hover {
+      font-weight: 500; }
+      .no-touch .table-comparison tbody tr:hover td {
+        font-weight: 500; }
+      .no-touch .table-comparison tbody tr:hover::before {
+        opacity: 1; }
   .table-comparison td {
     font-size: 2rem;
     line-height: 1.2;
@@ -4595,7 +4621,7 @@ select:-webkit-autofill:focus {
   position: relative; }
 
 .photo-comparison__card-content {
-  padding: 7.2rem; }
+  padding: 6rem; }
   @media only screen and (max-width: 1024px) {
     .photo-comparison__card-content {
       padding: 4rem; } }
@@ -4712,6 +4738,85 @@ select:-webkit-autofill:focus {
       .photo-comparison__slider .cd-handle svg:last-child {
         margin-right: 0; }
 
+.photo-comparison__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.photo-comparison__consultation-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  border-radius: 2rem;
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: var(--nunito);
+  padding: 2rem 2.2rem;
+  color: var(--text-color);
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+  margin-left: 2.4rem;
+  white-space: nowrap; }
+  @media only screen and (max-width: 640px) {
+    .photo-comparison__consultation-link {
+      width: 4.8rem;
+      height: 4.8rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      padding: 0;
+      border-radius: 1.5rem;
+      margin-left: 1.6rem; } }
+  .photo-comparison__consultation-link:link, .photo-comparison__consultation-link:visited {
+    color: var(--text-color); }
+  .photo-comparison__consultation-link svg {
+    width: 3.2rem;
+    height: 3.2rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    fill: var(--primary-color);
+    margin-right: 1.3rem;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+    @media only screen and (max-width: 640px) {
+      .photo-comparison__consultation-link svg {
+        width: 2rem;
+        height: 2rem;
+        margin: 0; } }
+  .no-touch .photo-comparison__consultation-link:hover,
+  .touch .photo-comparison__consultation-link:active {
+    background-color: var(--primary-color);
+    color: white; }
+    .no-touch .photo-comparison__consultation-link:hover svg,
+    .touch .photo-comparison__consultation-link:active svg {
+      fill: white; }
+
+@media only screen and (max-width: 640px) {
+  .photo-comparison__consultation-link-text {
+    display: none; } }
+
 .fullscreen-gallery {
   color: white;
   position: relative;
@@ -4750,7 +4855,11 @@ select:-webkit-autofill:focus {
       -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(7rem, black));
       -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 7rem);
               mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(7rem, black));
-              mask-image: linear-gradient(to bottom, transparent 0, black 7rem); } }
+              mask-image: linear-gradient(to bottom, transparent 0, black 7rem);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0); } }
   .intro-animation .fullscreen-gallery__bg-slider {
     opacity: 0;
     visibility: hidden; }
@@ -4904,6 +5013,9 @@ select:-webkit-autofill:focus {
       opacity: 1; }
     .fullscreen-gallery__categories-link.active:link, .fullscreen-gallery__categories-link.active:visited {
       color: var(--text-color); }
+
+.fullscreen-gallery__categories-link-title {
+  font-weight: 500; }
 
 .fullscreen-gallery__categories-link-bg {
   position: absolute;
@@ -5718,10 +5830,10 @@ select:-webkit-autofill:focus {
     .benefits__card-content {
       padding: 1.2rem; } }
   .benefits__card.active .benefits__card-content {
-    width: calc(200% + 8rem); }
+    width: calc(200% + 8rem + 1px); }
     @media only screen and (max-width: 640px) {
       .benefits__card.active .benefits__card-content {
-        width: calc(200% + 2rem); } }
+        width: calc(200% + 2rem + 1px); } }
     .benefits__card.active .benefits__card-content::before {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;

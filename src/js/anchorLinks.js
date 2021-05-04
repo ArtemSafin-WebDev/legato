@@ -22,7 +22,7 @@ export default function anchorLinks() {
                    
 
                     gsap.to(window, {
-                        duration: 4,
+                        duration: 2,
                         ease: 'power2.out',
                         scrollTo: {
                             y: elementToScroll,

@@ -3,7 +3,6 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-  
 }
 
 .fullscreen-gallery__content {
@@ -35,6 +34,8 @@
 
     @include breakpoint(mobile) {
         mask-image: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 1) 7rem);
+        backface-visibility: hidden;
+        transform: translateZ(0);
     }
 
     .intro-animation & {
@@ -191,6 +192,10 @@
             color: var(--text-color);
         }
     }
+}
+
+.fullscreen-gallery__categories-link-title {
+    font-weight: 500;
 }
 
 .fullscreen-gallery__categories-link-bg {

@@ -1,8 +1,35 @@
 .thickness {
     padding: 10rem 0;
+   
+
+    
 
     @include breakpoint(mobile) {
         padding: 4.8rem 0;
+    }
+}
+
+.thickness__content {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        right: 0;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        width: 46rem;
+        height: 53rem;
+        background-image: url('../img/thickness-illustration.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
@@ -23,7 +50,7 @@
     grid-row-gap: 4rem;
 
     @include breakpoint(small-tablet) {
-        grid-column-gap: 4rem;
+        grid-column-gap: 6rem;
     }
 
     @include breakpoint(mobile) {

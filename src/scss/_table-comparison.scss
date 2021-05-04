@@ -65,6 +65,11 @@
             }
         }
         .no-touch &:hover {
+            font-weight: 500;
+
+            td {
+                font-weight: 500;
+            }
             &::before {
                 opacity: 1;
             }

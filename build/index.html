@@ -45,28 +45,28 @@
                                 </button>
                             </div>
                             <nav class="page-header__nav">
-                                <a href="#" class="page-header__nav-link" data-text="Описание">
+                                <a href="#to-description-block" class="page-header__nav-link" data-text="Описание">
                                     <div class="page-header__nav-link-text"> Описание</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Применение">
+                                <a href="#to-application-block" class="page-header__nav-link" data-text="Применение">
                                     <div class="page-header__nav-link-text"> Применение</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Виды">
+                                <a href="#to-kinds-block" class="page-header__nav-link" data-text="Виды">
                                     <div class="page-header__nav-link-text"> Виды</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Выбрать толщину">
+                                <a href="#to-thickness-block" class="page-header__nav-link" data-text="Выбрать толщину">
                                     <div class="page-header__nav-link-text"> Выбрать толщину</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Внешний вид">
+                                <a href="#to-surface-types-block" class="page-header__nav-link" data-text="Внешний вид">
                                     <div class="page-header__nav-link-text"> Внешний вид</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Свойства">
+                                <a href="#to-why-us-block" class="page-header__nav-link" data-text="Свойства">
                                     <div class="page-header__nav-link-text"> Свойства</div>
                                 </a>
                                 <a href="#to-calculator" class="page-header__nav-link" data-text="Расчет стоимости">
                                     <div class="page-header__nav-link-text"> Расчет стоимости</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text=" Отзывы">
+                                <a href="#to-reviews-block" class="page-header__nav-link" data-text=" Отзывы">
                                     <div class="page-header__nav-link-text"> Отзывы</div>
                                 </a>
                             </nav>
@@ -172,7 +172,7 @@
 </section>
 
 
-<section class="photo-comparison">
+<section class="photo-comparison" id="description-block">
     <div class="container">
         <div class="photo-comparison__card">
             <div class="photo-comparison__card-col">
@@ -190,9 +190,22 @@
                             мебель, чтобы ее защитить!
                         </p>
                     </div>
-                    <a href="#to-calculator" class="btn photo-comparison__link">
-                        Рассчитать стоимость
-                    </a>
+                    <div class="photo-comparison__btns">
+                        <a href="#to-calculator" class="btn photo-comparison__link">
+                            Рассчитать стоимость
+                        </a>
+                        <a href="#callback" class="photo-comparison__consultation-link js-open-modal">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-question">
+                                <use xlink:href="#question"></use>
+                            </svg>
+                            <div class="photo-comparison__consultation-link-text">
+                                Получить консультацию
+                            </div>
+
+                        </a>
+                    </div>
+
+
                 </div>
             </div>
             <div class="photo-comparison__card-col">
@@ -224,33 +237,38 @@
     </div>
 </section>
 
-<section class="fullscreen-gallery js-fullscreen-gallery">
+<section class="fullscreen-gallery js-fullscreen-gallery" id="application-block">
     <div class="fullscreen-gallery__bg-slider">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="fullscreen-gallery__bg-slider-card">
-                        <img data-src="img/fullscreen-slider/1.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image lazyload">
+                        <img data-src="img/fullscreen-slider/1.jpg" alt=""
+                            class="fullscreen-gallery__bg-slider-card-image lazyload">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="fullscreen-gallery__bg-slider-card">
-                        <img data-src="img/fullscreen-slider/2.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image lazyload">
+                        <img data-src="img/fullscreen-slider/2.jpg" alt=""
+                            class="fullscreen-gallery__bg-slider-card-image lazyload">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="fullscreen-gallery__bg-slider-card">
-                        <img data-src="img/fullscreen-slider/1.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image lazyload">
+                        <img data-src="img/fullscreen-slider/1.jpg" alt=""
+                            class="fullscreen-gallery__bg-slider-card-image lazyload">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="fullscreen-gallery__bg-slider-card">
-                        <img data-src="img/fullscreen-slider/2.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image lazyload">
+                        <img data-src="img/fullscreen-slider/2.jpg" alt=""
+                            class="fullscreen-gallery__bg-slider-card-image lazyload">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="fullscreen-gallery__bg-slider-card">
-                        <img data-src="img/fullscreen-slider/1.jpg" alt="" class="fullscreen-gallery__bg-slider-card-image lazyload">
+                        <img data-src="img/fullscreen-slider/1.jpg" alt=""
+                            class="fullscreen-gallery__bg-slider-card-image lazyload">
                     </div>
                 </div>
             </div>
@@ -867,7 +885,7 @@
     </div>
 </section>
 
-<section class="glass">
+<section class="glass" id="kinds-block">
     <div class="container">
         <div class="glass__card">
             <div class="glass__card-top-row">
@@ -945,81 +963,89 @@
     </div>
 </section>
 
-<section class="thickness">
+<section class="thickness" id="thickness-block">
     <div class="container">
-        <h2 class="section-heading thickness__heading">
-            Силиконовая скатерть на стол – Какую толщину выбрать?
-        </h2>
-        <ul class="thickness__list">
-            <li class="thickness__list-item">
-                <div class="thickness__card">
-                    <img src="img/thickness/1.svg" alt="" class="thickness__card-icon">
-                    <h4 class="thickness__card-title">
-                        Силиконовая скатерть 1 мм на стол прозрачная придаст поверхности новизну
-                    </h4>
-                    <div class="thickness__card-text">
-                        <p>
-                            Подойдет для поверхностей с низким износом - комоды, подоконники, тумбочки и т.д. Мягкое
-                            стекло на стол– гарантированно защитит предметы интерьера от царапини прочих повреждений.
-                        </p>
-                    </div>
-                    <div class="thickness__card-price">
-                        <h5 class="thickness__card-price-title">
-                            Стоимость
-                        </h5>
-                        <div class="thickness__card-price-amount">
-                            от 720₽ / 1м2
+        <div class="thickness__content">
+
+
+            <h2 class="section-heading thickness__heading">
+                Силиконовая скатерть на стол –<br> Какую толщину выбрать?
+            </h2>
+            <ul class="thickness__list">
+                <li class="thickness__list-item">
+                    <div class="thickness__card">
+                        <img src="img/thickness/1.svg" alt="" class="thickness__card-icon">
+                        <h4 class="thickness__card-title">
+                            Силиконовая скатерть 1 мм на&nbsp;стол прозрачная придаст поверхности новизну
+                        </h4>
+                        <div class="thickness__card-text">
+                            <p>
+                                Подойдет для поверхностей с низким износом - комоды, подоконники, тумбочки и т.д. Мягкое
+                                стекло на стол– гарантированно защитит предметы интерьера от царапини прочих
+                                повреждений.
+                            </p>
+                        </div>
+                        <div class="thickness__card-price">
+                            <h5 class="thickness__card-price-title">
+                                Стоимость
+                            </h5>
+                            <div class="thickness__card-price-amount">
+                                от 720₽ / 1м2
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li class="thickness__list-item">
-                <div class="thickness__card">
-                    <img src="img/thickness/2.svg" alt="" class="thickness__card-icon">
-                    <h4 class="thickness__card-title">
-                        Силиконовая скатерть 1,5 мм скроет уже имеющиеся дефекты
-                    </h4>
-                    <div class="thickness__card-text">
-                        <p>
-                            Для таких поверхностей, как офисные столы, школьные парты, детскиестолики рекомендуем брать
-                            силиконовую скатерть 1,5 мм. Под прозрачным стеклом удобнохранить школьное расписаниеи
-                            стикеры с заметками.
-                        </p>
-                    </div>
-                    <div class="thickness__card-price">
-                        <h5 class="thickness__card-price-title">
-                            Стоимость
-                        </h5>
-                        <div class="thickness__card-price-amount">
-                            от 950₽ / 1м2
+                </li>
+                <li class="thickness__list-item">
+                    <div class="thickness__card">
+                        <img src="img/thickness/2.svg" alt="" class="thickness__card-icon">
+                        <h4 class="thickness__card-title">
+                            Силиконовая скатерть 1,5 мм скроет уже имеющиеся дефекты
+                        </h4>
+                        <div class="thickness__card-text">
+                            <p>
+                                Для таких поверхностей, как офисные столы, школьные парты, детскиестолики рекомендуем
+                                брать
+                                силиконовую скатерть 1,5 мм. Под прозрачным стеклом удобнохранить школьное расписаниеи
+                                стикеры с заметками.
+                            </p>
+                        </div>
+                        <div class="thickness__card-price">
+                            <h5 class="thickness__card-price-title">
+                                Стоимость
+                            </h5>
+                            <div class="thickness__card-price-amount">
+                                от 950₽ / 1м2
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li class="thickness__list-item">
-                <div class="thickness__card">
-                    <img src="img/thickness/3.svg" alt="" class="thickness__card-icon">
-                    <h4 class="thickness__card-title">
-                        Силиконовая скатерть 2 ммне изменит дизайн вашего стола
-                    </h4>
-                    <div class="thickness__card-text">
-                        <p>
-                            Самая оптимальная толщина защитной пленки для кухонных столов 2 мм.Такая защитная пленка не
-                            скрывает красоту стола, но при этом надежно защищает его. Мягкое стекло можно применить как
-                            защиту напольного покрытия под компьютерное кресло.
-                        </p>
-                    </div>
-                    <div class="thickness__card-price">
-                        <h5 class="thickness__card-price-title">
-                            Стоимость
-                        </h5>
-                        <div class="thickness__card-price-amount">
-                            от 1080₽ / 1м2
+                </li>
+                <li class="thickness__list-item">
+                    <div class="thickness__card">
+                        <img src="img/thickness/3.svg" alt="" class="thickness__card-icon">
+                        <h4 class="thickness__card-title">
+                            Силиконовая скатерть 2 мм не изменит дизайн вашего стола
+                        </h4>
+                        <div class="thickness__card-text">
+                            <p>
+                                Самая оптимальная толщина защитной пленки для кухонных столов 2 мм. Такая защитная
+                                пленка не
+                                скрывает красоту стола, но при этом надежно защищает его. Мягкое стекло можно применить
+                                как
+                                защиту напольного покрытия под компьютерное кресло.
+                            </p>
+                        </div>
+                        <div class="thickness__card-price">
+                            <h5 class="thickness__card-price-title">
+                                Стоимость
+                            </h5>
+                            <div class="thickness__card-price-amount">
+                                от 1080₽ / 1м2
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -1037,35 +1063,35 @@
 
                 <ul class="swiper-wrapper special__promo-list">
                     <li class="swiper-slide special__promo-list-item">
-                        <a href="#" class="special__promo-card">
+                        <a href="#callback-simple" class="special__promo-card">
                             <img src="img/special/special-icon-1.svg" alt="" class="special__promo-card-icon">
                             <div class="special__promo-card-amount">
                                 20%
                             </div>
                             <h4 class="special__promo-card-title">
-                                При заказе 2-х полотен получите скидку 20%
+                                При заказе 2-х<br> полотен получите<br> скидку 20%
                             </h4>
                         </a>
                     </li>
                     <li class="swiper-slide special__promo-list-item">
-                        <a href="#" class="special__promo-card">
+                        <a href="#callback-simple" class="special__promo-card js-open-modal">
                             <img src="img/special/special-icon-2.svg" alt="" class="special__promo-card-icon">
                             <div class="special__promo-card-amount">
                                 30%
                             </div>
                             <h4 class="special__promo-card-title">
-                                При заказе 3-х полотен получите скидку 30%
+                                При заказе 3-х<br> полотен получите<br> скидку 30%
                             </h4>
                         </a>
                     </li>
                     <li class="swiper-slide special__promo-list-item">
-                        <a href="#" class="special__promo-card">
+                        <a href="#callback-simple" class="special__promo-card js-open-modal">
                             <img src="img/special/special-icon-3.svg" alt="" class="special__promo-card-icon">
                             <div class="special__promo-card-amount">
                                 Подарок
                             </div>
                             <h4 class="special__promo-card-title">
-                                При заказе 3+ — индвидуальное предложение
+                                При заказе<br> 3+ — индвидуальное<br> предложение
                             </h4>
                         </a>
                     </li>
@@ -1081,7 +1107,7 @@
 </section>
 
 
-<section class="surface-types">
+<section class="surface-types" id="surface-types-block">
     <div class="container">
         <h2 class="section-heading surface-types__heading">
             Как выглядит силиконовая скатерть на разных поверхностях
@@ -1093,27 +1119,32 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="surface-types__slider-card">
-                                    <img data-src="img/product-type.jpg" alt="" class="surface-types__slider-card-image lazyload">
+                                    <img data-src="img/product-type.jpg" alt=""
+                                        class="surface-types__slider-card-image lazyload">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="surface-types__slider-card">
-                                    <img data-src="img/product-type.jpg" alt="" class="surface-types__slider-card-image lazyload">
+                                    <img data-src="img/product-type.jpg" alt=""
+                                        class="surface-types__slider-card-image lazyload">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="surface-types__slider-card">
-                                    <img data-src="img/product-type.jpg" alt="" class="surface-types__slider-card-image lazyload">
+                                    <img data-src="img/product-type.jpg" alt=""
+                                        class="surface-types__slider-card-image lazyload">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="surface-types__slider-card">
-                                    <img data-src="img/product-type.jpg" alt="" class="surface-types__slider-card-image lazyload">
+                                    <img data-src="img/product-type.jpg" alt=""
+                                        class="surface-types__slider-card-image lazyload">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="surface-types__slider-card">
-                                    <img data-src="img/product-type.jpg" alt="" class="surface-types__slider-card-image lazyload">
+                                    <img data-src="img/product-type.jpg" alt=""
+                                        class="surface-types__slider-card-image lazyload">
                                 </div>
                             </div>
                         </div>
@@ -1269,7 +1300,7 @@
                                 class="surface-types__advantages-card-icon">
                             <div class="surface-types__advantages-card-text">
                                 <p>
-                                    Силиконовая скатерть на квадратный
+                                    Силиконовая скатерть<br> на квадратный
                                     стол
                                 </p>
                             </div>
@@ -1281,7 +1312,7 @@
                                 class="surface-types__advantages-card-icon">
                             <div class="surface-types__advantages-card-text">
                                 <p>
-                                    Скатерть гибкое стекло на круглый стол
+                                    Скатерть<br> гибкое стекло на круглый стол
                                 </p>
                             </div>
                         </div>
@@ -1304,7 +1335,7 @@
 </section>
 
 
-<section class="why-us">
+<section class="why-us" id="why-us-block">
     <div class="container">
         <div class="why-us__top-row">
             <div class="why-us__content">
@@ -1529,7 +1560,8 @@
                                             64 см
                                         </div>
                                     </div>
-                                    <img data-src="img/tables/1.png" alt="" class="calculator__forms-slider-card-image lazyload">
+                                    <img data-src="img/tables/1.png" alt=""
+                                        class="calculator__forms-slider-card-image lazyload">
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -1545,7 +1577,8 @@
                                             64 см
                                         </div>
                                     </div>
-                                    <img data-src="img/tables/2.png" alt="" class="calculator__forms-slider-card-image lazyload">
+                                    <img data-src="img/tables/2.png" alt=""
+                                        class="calculator__forms-slider-card-image lazyload">
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -1558,7 +1591,8 @@
                                         </div>
 
                                     </div>
-                                    <img data-src="img/tables/3.png" alt="" class="calculator__forms-slider-card-image lazyload">
+                                    <img data-src="img/tables/3.png" alt=""
+                                        class="calculator__forms-slider-card-image lazyload">
                                 </div>
                             </div>
                         </div>
@@ -1703,7 +1737,7 @@
                         определить размеры стола, чтобы безошибочно заказать скатерть.
                     </p>
                 </div>
-                <a href="#callback-simple" class="btn advantage__link js-open-modal">
+                <a href="assets/instruction.pdf" class="btn advantage__link" target="_blank">
                     Получить инструкцию
                 </a>
             </div>
@@ -1711,7 +1745,7 @@
     </div>
 </section>
 
-<section class="reviews">
+<section class="reviews" id="reviews-block">
     <div class="container">
         <h2 class="section-heading reviews__heading">
             Гибкое стекло для стола - наши отзывы
@@ -2211,7 +2245,8 @@
                         Заполните форму и мы позвоним в удобное для вас время.
                     </p>
                 </div>
-                <form action="/" method="POST" class="how-to-choose__card-form" data-need-validation="" id="contact-us-form">
+                <form action="/" method="POST" class="how-to-choose__card-form" data-need-validation=""
+                    id="contact-us-form">
                     <div class="how-to-choose__card-form-field how-to-choose__card-form-field--fullwidth-on-mobile">
                         <input type="text" name="name" class="how-to-choose__card-form-input" required
                             placeholder="Имя">
@@ -2222,7 +2257,7 @@
                     </div>
                     <div class="how-to-choose__card-form-policy">
                         <p>
-                            Нажимая “Отправить”, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                            Нажимая “Заказать звонок”, вы соглашаетесь с <a href="#">обработкой персональных данных</a>
                         </p>
                     </div>
                     <button class="btn how-to-choose__card-form-submit" type="submit">
@@ -2319,7 +2354,9 @@
                     </div>
                     <div class="modal__form-field">
                         <div class="modal__form-field-policy">
-                            <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                            <p>
+                                Нажимая “Заказать звонок”, вы соглашаетесь с <a href="#">обработкой персональных данных</a>
+                            </p>
                         </div>
                     </div>
                     <div class="modal__form-field">
@@ -2358,7 +2395,9 @@
         
                     <div class="modal__form-field">
                         <div class="modal__form-field-policy">
-                            <p>Нажимая «Заказать звонок», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                            <p>
+                                Нажимая “Заказать звонок”, вы соглашаетесь с <a href="#">обработкой персональных данных</a>
+                            </p>
                         </div>
                     </div>
                     <div class="modal__form-field">
