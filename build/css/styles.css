@@ -6000,6 +6000,16 @@ select:-webkit-autofill:focus {
   line-height: 120%;
   font-family: var(--nunito);
   padding-top: 1.4rem; }
+  .benefits__card:not(.active) .benefits__card-title {
+    padding-right: 7rem;
+    -webkit-animation-name: fade-title-in-out-close;
+            animation-name: fade-title-in-out-close;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
   .benefits__card.active .benefits__card-title {
     padding-right: 7rem;
     -webkit-animation-name: fade-title-in-out;
@@ -6030,6 +6040,26 @@ select:-webkit-autofill:focus {
     opacity: 1; } }
 
 @keyframes fade-title-in-out {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-title-in-out-close {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-title-in-out-close {
   0% {
     opacity: 1; }
   20% {
