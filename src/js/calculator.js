@@ -19,7 +19,7 @@ export default function calculator() {
             }
         });
 
-        let activeMode = 288717;
+        let activeMode = 1;
 
         const formSelect = element.querySelector('#form-select');
         const lengthInput = element.querySelector('#length');
@@ -61,11 +61,11 @@ export default function calculator() {
 
             let total = 0;
 
-            if (activeMode === 288717 || activeMode === 288715 || activeMode === 288719) {
+            if (activeMode === 1 || activeMode === 2) {
                 if (isNaN(length) || isNaN(width) || isNaN(thickness)) return;
 
                 total = 800 + ((length * width) / 100) * thickness;
-            } else if (activeMode === 288713) {
+            } else if (activeMode === 3) {
                 if (isNaN(diameter) || isNaN(thickness)) return;
 
                 total = 800 + (diameter / 100 * thickness);
@@ -93,7 +93,7 @@ export default function calculator() {
         const handleTableForm = () => {
             slider.slideTo(activeMode - 1);
 
-            if (activeMode === 288713) {
+            if (activeMode === 3) {
                 diameterInput.closest('.calculator__form-field').style.display = '';
                 lengthInput.closest('.calculator__form-field').style.display = 'none';
                 widthInput.closest('.calculator__form-field').style.display = 'none';

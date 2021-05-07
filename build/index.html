@@ -1650,11 +1650,9 @@
                             </div>
                             <div class="calculator__form-select">
                                 <select name="fields[206719_2]" class="js-custom-select" id="form-select">
-							        <option value="288717">Прямоугольный стол</option>
-							        <option value="288713">Круглый стол</option>
-							        <option value="288715">Овальный стол</option>
-							        <option value="288719">Квадратный стол</option>
-							        <option value="288721">Треугольный стол</option>
+							        <option value="1">Прямоугольный стол</option>
+							        <option value="2">Овальный стол</option>
+							        <option value="3">Круглый стол</option>
                                 </select>
                             </div>
                         </div>
@@ -2287,8 +2285,6 @@
                             Нажимая “Заказать звонок”, вы соглашаетесь с <a href="#">обработкой персональных данных</a>
                         </p>
                     </div>
-                    <input type="hidden" name="form_id" id="form_id" value="778066">
-                    <input type="hidden" name="hash" value="3572043777be9bd706abed19f506679f">
 					<input type="hidden" name="form_name" value="Форма обратной связи">
                     <button class="btn how-to-choose__card-form-submit" type="submit">
                         Заказать звонок
@@ -2418,12 +2414,13 @@
                 </div>
                 <form action="" method="POST" class="modal__form" data-need-validation id="callback-form-simple">
                     <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
-                        <input type="name" class="modal__form-input" placeholder="Имя" required>
+                        <input type="name" name="fields[name_1]" class="modal__form-input" placeholder="Имя" required>
                     </div>
                     <div class="modal__form-field modal__form-field--fullwidth-on-mobile">
-                        <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required
+                        <input type="tel" name="fields[58913_1][83995]" class="modal__form-input js-phone-input" placeholder="Телефон" required
                             data-parsley-phone>
                     </div>
+                    <input type="hidden" name="form_name" value="Модальная форма">
                     <div class="modal__form-field">
                         <div class="modal__form-field-policy">
                             <p>

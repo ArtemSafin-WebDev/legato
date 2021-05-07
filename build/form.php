@@ -16,20 +16,17 @@ if ($_POST['fields']['name_1'] != "Не указано" && $_POST['fields']['nam
 {
 
 	switch ($tableForm) {
-		case '288717':
+		case '1':
+			$tableFormAmo = "288717";
 			$tableForm = "Прямоугольный стол";
 			break;
-		case '288713':
-			$tableForm = "Круглый стол";
-			break;
-		case '288715':
+		case '2':
+			$tableFormAmo = "288715";
 			$tableForm = "Овальный стол";
 			break;
-		case '288719':
-			$tableForm = "Квадратный стол";
-			break;
-		case '288721' :
-			$tableForm = "Треугольный стол";
+		case '3':
+			$tableFormAmo = "288713";
+			$tableForm = "Круглый стол";
 			break;
 	}
 
@@ -37,7 +34,7 @@ if ($_POST['fields']['name_1'] != "Не указано" && $_POST['fields']['nam
 		'fields' => array (
 			'name_1' => $name, 
 			'58913_1' => array ('83995' => $phone),
-			'206719_2'=> $tableForm,
+			'206719_2'=> $tableFormAmo,
 			'206721_2' => $tableLength,
 			'206723_2' => $tableWidth,
 			'461833_2' => $tableDiameter,
@@ -97,10 +94,14 @@ $arr = array(
 );
 
 foreach($arr as $key => $value) {
-	if($key == "Комментарий")
-		$txt .= "<b>".$key."</b> ".$value."%0A<b>Заявка с формы</b> ".$tableFormName."%0A";
-	else
-  		$txt .= "<b>".$key."</b> ".$value."%0A";
+	if($value == "Не указано")
+		continue;
+	else{
+		if($key == "Комментарий")
+			$txt .= "<b>".$key."</b> ".$value."%0A<b>Заявка с формы</b> ".$tableFormName."%0A";
+		else
+  			$txt .= "<b>".$key."</b> ".$value."%0A";
+	}
 };
 
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
