@@ -17,7 +17,7 @@
     border-radius: 2rem;
     border: 1px solid var(--primary-color);
 
-    &:not(.btn--hollow):not(.btn--white) {
+    &:not(.btn--hollow) {
         @include cta-hover();
     }
 
@@ -46,19 +46,8 @@
         }
     }
 
-    &--white {
-        background-color: white;
-        border-color: white;
-        color: var(--text-color);
-
-        &:link,
-        &:visited {
-            color: var(--text-color);
-        }
-    }
-
-    .no-touch &:not(.btn--hollow):not(.btn--white):hover,
-    .touch &:not(.btn--hollow):not(.btn--white):active {
+    .no-touch &:not(.btn--hollow):hover,
+    .touch &:not(.btn--hollow):active {
         background-color: var(--primary-color-hover);
         border-color: var(--primary-color-hover);
         color: white;
