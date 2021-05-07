@@ -18,6 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     .parsley()
                     .isValid()
             ) {
+                console.log("Ща будет косольлог формы");
+                console.log(form);
+                $.ajax({
+                    url:      "", //url страницы (action_ajax_form.php)
+                    type:     "POST", //метод отправки
+                    dataType: "html", //формат данных
+                    data: $("#"+form).serialize(),  // Сеарилизуем объект
+                    success: function(response) { //Данные отправлены успешно
+                        console.log("ФОрма заебок");
+                        window.openModal('#success');
+                    },
+                    error: function(response) { // Данные не отправлены
+                        console.log("ФОрма хуйня");
+                    }
+                });
                 form.reset();
                 $(form)
                     .parsley()

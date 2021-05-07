@@ -81,7 +81,7 @@ export default function calculator() {
                     ${Math.ceil(total * 1.1)} ₽
                 </div>
                     `;
-
+                document.getElementById('calc_price').value = Math.ceil(total);
                 totalElement.style.display = '';
             } else {
                 console.error('Total is NaN or zero');

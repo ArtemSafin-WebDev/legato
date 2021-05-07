@@ -18,12 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     .parsley()
                     .isValid()
             ) {
+                $.ajax({
+                    url:      "form.php", 
+                    type:     "POST",
+                    dataType: "html",
+                    data: $("#"+form.id).serialize(),
+                    success: function(response) {
+                        window.openModal('#success');
+                    },
+                    error: function(response) {
+                        console.log("Форма не работает");
+                    }
+                });
                 form.reset();
                 $(form)
                     .parsley()
                     .reset();
-
-                window.openModal('#success');
             }
         });
     });
