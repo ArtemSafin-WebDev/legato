@@ -52,7 +52,7 @@
 
 </head>
 
-<body class="no-touch" ontouchstart="">
+<body class="no-touch {{#if orangeBg}} orange-bg {{/if}}" ontouchstart="">
     <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
         {{> sprite }}
     </div>
@@ -64,7 +64,10 @@
 
             {{/block}}
         </main>
-        {{> footer }}
+        {{#unless noFooter }}
+            {{> footer }}
+        {{/unless}}
+
         {{> modals }}
         {{> ie-placeholder }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
